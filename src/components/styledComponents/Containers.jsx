@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 // border-radius: 8px
 // background-color: rgb(255, 255, 255);
@@ -65,6 +65,7 @@ export const StyledGridPageContainer = styled('div')`
 
 export const StyledPageContentContainer = styled('div')`
     margin-left: 1em;
+    background: transparent;
 
 `;
 
