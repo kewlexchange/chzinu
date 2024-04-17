@@ -6,18 +6,32 @@ const Coin = ({position, scale, rotation}) => {
     const meshRef = useRef();
     const coinTexture = useTexture('./coin.jpg');
     const coinRef = useRef()
+    const calcRandom = () => Math.random() * 10;
 
 
     useFrame((state, delta) =>{
         for(const coin of coinRef.current.children)
         {
-            coin.rotation.z += delta * 0.2
-            coin.rotation.y += delta * 0.2
+            coin.rotation.z += delta * 0.5
+            coin.rotation.y += delta * 0.5
         }
+        updateCoinsPosition();
+
     })
 
+    // Función para actualizar la posición de las monedas
+    const updateCoinsPosition = () => {
+        for(const coin of coinRef.current.children)
+        {
+            coin.position.y -= 0.005
+        }           
+    };
+
+
     return (
-        <group ref={coinRef}>
+        <group 
+            ref={(ref) => (coinRef.current = ref)}
+        >
             <mesh ref={meshRef}  position={position} scale={scale}  
             rotation={ rotation}>
                 
