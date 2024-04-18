@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledHowToBuySection } from '../styledComponents/Containers';
 
 const HowToBuySection = () => {
     return (
-        <div>
-            
-        </div>
+        <StyledHowToBuySection>
+            HOW TO BUY
+        </StyledHowToBuySection>
     );
 }
 

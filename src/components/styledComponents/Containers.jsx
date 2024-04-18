@@ -38,29 +38,12 @@ export const StyledXCard = styled('div')`
 `
 export const StyledAppContainer = styled('div')`
     width: 100%;
-    height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-y: scroll;
+    flex-direction: column;
     background: linear-gradient(to bottom, #fcbb6b, #fdf8e5);
-
-    &::-webkit-scrollbar {
-        width: 0.5vw;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 4px #8B0000;
-        border-radius: 0px;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        box-shadow: inset 4px 2px 12px 2px #8B0000;
-        border-radius: 4px;
-    }
-    
-
 `
 
 
@@ -145,3 +128,33 @@ export const StyledHomeContainer = styled('div')`
     border-radius: 8px;
 
 `;
+
+
+export const StyledSection = styled('div')`
+    width: 80%;
+    display: flex;
+    height: 100vh;
+`
+
+export const StyledHomeSection = styled(StyledSection)`
+    width: 80%;
+    display: flex;
+    height: 100vh;
+`
+
+export const StyledAboutSection = styled(StyledSection)`
+    width: 80%;
+    display: flex;
+    height: 100vh;
+`
+export const StyledHowToBuySection = styled(StyledSection)`
+    width: 80%;
+    display: flex;
+    height: 100vh;
+`
+export const StyledTokenomicsSection = styled(StyledSection)`
+    width: 80%;
+    display: flex;
+    height: 100vh;
+`
+

@@ -2,15 +2,22 @@ html,
 body,
 #root
 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ivory;
+    margin: 0;
+    padding: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5vw;
+}
 
+/* Track */
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px #8B0000;
+    border-radius: 0px;
+}
 
-
+body::-webkit-scrollbar-thumb {
+    box-shadow: inset 4px 2px 12px 2px #8B0000;
+    border-radius: 4px;
+}
   

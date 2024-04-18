@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledAboutSection } from '../styledComponents/Containers';
 
 const AboutSection = () => {
     return (
-        <div>
-            
-        </div>
+        <StyledAboutSection>
+            ABOUT
+        </StyledAboutSection>
     );
 }
 

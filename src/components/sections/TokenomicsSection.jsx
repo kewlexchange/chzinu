@@ -1,10 +1,11 @@
 import React from 'react';
+import { StyledTokenomicsSection } from '../styledComponents/Containers';
 
 const TokenomicsSection = () => {
     return (
-        <div>
-            
-        </div>
+        <StyledTokenomicsSection>
+            TOKENOMICS
+        </StyledTokenomicsSection>
     );
 }
 

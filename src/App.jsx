@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar.jsx';
-import { StyledAppContainer, StyledHomeContainer } from './components/styledComponents/Containers.jsx'
+import AboutSection from './components/sections/AboutSection.jsx';
+import HomeSection from './components/sections/HomeSection.jsx';
+import { StyledAppContainer } from './components/styledComponents/Containers.jsx'
 
 
 export default function App() {
@@ -10,10 +12,8 @@ export default function App() {
     return (
         <StyledAppContainer>
             <Navbar/>
-
-            <StyledHomeContainer>
-                <h1>asd</h1>
-            </StyledHomeContainer>
+            <HomeSection/>
+            <AboutSection/>
 
         </StyledAppContainer>
     );
