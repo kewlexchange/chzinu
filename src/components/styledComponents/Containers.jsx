@@ -39,6 +39,9 @@ export const StyledXCard = styled('div')`
 export const StyledAppContainer = styled('div')`
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow-y: scroll;
     background: linear-gradient(to bottom, #fcbb6b, #fdf8e5);
 
@@ -62,33 +65,83 @@ export const StyledAppContainer = styled('div')`
 
 
 export const StyledNavBar = styled('div')`
-    width: 80%;
-    height: 80%;
+    width: 35%;
     margin: 0 auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 5%;
     transform: translate(-50%, -50%);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
     background-color: rgb(255, 255, 255);
-    border-radius: 8px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px 0 0;
+
+    .logo-img{
+        cursor: pointer;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &:hover{
+            animation: logo-spin 1s;
+        }
+              
+        @keyframes logo-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        img{
+            position: absolute;
+            width: 150% !important;
+            border-radius: 50%;
+
+
+        }
+    }
+
+    .navbar-items{
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            color: #ce0001;
+            text-decoration: none;
+            font-family: "Varela Round", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            transition: all 0.3s ease-in;
+            border-radius: 15px;
+            padding: 8px;
+            margin: 12px 20px;
+
+
+            &:hover{
+                background-color: #ce0001;
+                color: white;
+            }
+        }
+    
+    }
 
     z-index: 999; /* Asegura que el contenedor esté por encima de otros elementos */
-    padding: 20px; /* Ajusta el relleno según sea necesario */
 `;
 
 export const StyledHomeContainer = styled('div')`
     width: 80%;
     height: 80%;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
-    background-color: rgb(255, 255, 255);
+    // background-color: rgb(255, 255, 255);
     border-radius: 8px;
 
-    z-index: 999; /* Asegura que el contenedor esté por encima de otros elementos */
-    padding: 20px; /* Ajusta el relleno según sea necesario */
 `;
