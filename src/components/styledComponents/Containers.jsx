@@ -60,6 +60,7 @@ export const StyledNavBar = styled('div')`
     justify-content: flex-start;
     align-items: center;
     padding: 0 10px 0 0;
+    border: 1px solid black;
 
     .logo-img{
         cursor: pointer;
@@ -121,11 +122,54 @@ export const StyledNavBar = styled('div')`
 `;
 
 export const StyledHomeContainer = styled('div')`
-    width: 80%;
+    width: 100%;
     height: 80%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
-    // background-color: rgb(255, 255, 255);
+    background-color: #fdf8e5;
     border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    img{
+        width: 580px;
+        border-radius: 8px;
+
+    }
+
+    .home-text-container{
+        width: 100%;
+        color: #ce0001;
+        text-decoration: none;
+        font-family: "Varela Round", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+
+        h1{
+            width: 100%;
+            text-align: center;
+            margin-top: 1em;
+            span{
+                color: red;
+                text-shadow: 0 0.0377358491em 0 #000, 0.0125786164em 0.0377358491em 0 #000, 0.0125786164em -0.0125786164em 0 #000, -0.0125786164em 0.0125786164em 0 #000, -0.0125786164em -0.0125786164em 0 #000;
+                font-family: "Varela Round", sans-serif;
+                letter-spacing: -.01em;
+                text-transform: uppercase;
+                display: inline-block;
+                font-size: 100px;
+            }
+        }
+
+        p{
+            margin: 2em;
+            font-size: 25px;
+        }
+
+        
+    }
+
+
 
 `;
 
@@ -133,11 +177,13 @@ export const StyledHomeContainer = styled('div')`
 export const StyledSection = styled('div')`
     width: 80%;
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
     height: 100vh;
 `
 
 export const StyledHomeSection = styled(StyledSection)`
-    width: 80%;
+    width: 90%;
     display: flex;
     height: 100vh;
 `

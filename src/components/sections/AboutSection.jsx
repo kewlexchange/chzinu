@@ -3,7 +3,7 @@ import { StyledAboutSection } from '../styledComponents/Containers';
 
 const AboutSection = () => {
     return (
-        <StyledAboutSection>
+        <StyledAboutSection id='about'>
             ABOUT
         </StyledAboutSection>
     );
