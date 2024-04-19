@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { styled } from "@mui/system";
 
 // border-radius: 8px
@@ -43,12 +44,12 @@ export const StyledAppContainer = styled('div')`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to bottom, #fcbb6b, #fdf8e5);
+    background: #fdf8e5;
 `
 
 
 export const StyledNavBar = styled('div')`
-    width: 35%;
+    width: 30%;
     margin: 0 auto;
     position: absolute;
     top: 5%;
@@ -64,14 +65,14 @@ export const StyledNavBar = styled('div')`
 
     .logo-img{
         cursor: pointer;
-        width: 20%;
+        width: 15%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
 
         &:hover{
-            animation: logo-spin 1s;
+            animation: logo-spin 1.2s;
         }
               
         @keyframes logo-spin {
@@ -93,12 +94,13 @@ export const StyledNavBar = styled('div')`
     }
 
     .navbar-items{
-        cursor: pointer;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         a{
+        cursor: pointer;
+
             color: #ce0001;
             text-decoration: none;
             font-family: "Varela Round", sans-serif;
@@ -107,7 +109,7 @@ export const StyledNavBar = styled('div')`
             transition: all 0.3s ease-in;
             border-radius: 15px;
             padding: 8px;
-            margin: 12px 20px;
+            margin: 12px 10px;
 
 
             &:hover{
@@ -123,7 +125,7 @@ export const StyledNavBar = styled('div')`
 
 export const StyledHomeContainer = styled('div')`
     width: 100%;
-    height: 80%;
+    height: 70%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
     background-color: #fdf8e5;
     border-radius: 8px;
@@ -140,32 +142,105 @@ export const StyledHomeContainer = styled('div')`
 
     .home-text-container{
         width: 100%;
+        height: 100%;
         color: #ce0001;
         text-decoration: none;
         font-family: "Varela Round", sans-serif;
         font-weight: bold;
         font-style: normal;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         h1{
             width: 100%;
-            text-align: center;
-            margin-top: 1em;
+            margin-top: -2em;
             span{
-                color: red;
+                color: #ce0001;
                 text-shadow: 0 0.0377358491em 0 #000, 0.0125786164em 0.0377358491em 0 #000, 0.0125786164em -0.0125786164em 0 #000, -0.0125786164em 0.0125786164em 0 #000, -0.0125786164em -0.0125786164em 0 #000;
-                font-family: "Varela Round", sans-serif;
-                letter-spacing: -.01em;
+                font-family: sans-serif;
+                letter-spacing: 0.02em;
                 text-transform: uppercase;
                 display: inline-block;
-                font-size: 100px;
+                font-size: 130px;
             }
+
+            img{
+                position: absolute;
+                width: 180px;
+            }
+
+
         }
 
         p{
-            margin: 2em;
-            font-size: 25px;
+            color: black;
         }
 
+        .contract-address{
+            font-size: 22px;
+            margin-top: -1.5em;
+            cursor: pointer;
+            span{
+                transition: all .2s ease;
+                color: #ce0001;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+
+        .text-1{
+            font-size: 40px;
+            margin-top: -20px;
+
+            span{
+                color: #ce0001;
+            }
+        }
+
+        .text-2{
+            text-align: center;
+            margin: 0 4em 2em 0;
+            font-size: 35px;
+            overflow: hidden;
+
+            img{
+                position: absolute;
+                rigth: 0;
+                margin-left: 7.5em;
+                margin-top: 1em;
+                transform: rotate(-35deg); /* Rotar 35 grados hacia la izquierda */
+                width: 150px;
+            }
+
+        }
+
+
+        .buttons-container{
+            width: 100%;
+            margin: 2em auto;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            
+
+            button{
+                width: 240px;
+                padding: 0 30px;
+                border-radius: 20px;
+                font-size: 25px !important;
+                border: 2px solid transparent;
+                margin: 10px 15px;
+                
+                &:hover{
+                    color: black;
+                    opacity: 0.9 !important;
+                    border: 2px solid black;
+                }
+
+            }
+        }
         
     }
 
@@ -183,9 +258,10 @@ export const StyledSection = styled('div')`
 `
 
 export const StyledHomeSection = styled(StyledSection)`
-    width: 90%;
+    width: 100%;
     display: flex;
     height: 100vh;
+    overflow: hidden;
 `
 
 export const StyledAboutSection = styled(StyledSection)`
@@ -204,3 +280,13 @@ export const StyledTokenomicsSection = styled(StyledSection)`
     height: 100vh;
 `
 
+
+export const StyledHomeButton = styled(Button)`
+    background-color: #ce0001;
+    &:hover{
+        background-color: #ce0001;
+        opacity: 0.8;
+    }
+
+
+`
