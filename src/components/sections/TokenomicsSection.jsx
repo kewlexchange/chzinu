@@ -2,41 +2,12 @@ import React from 'react';
 import { StyledPageLine, StyledTokenomicsSection } from '../styledComponents/Containers';
 import TokenomicCard from '../TokenomicCard';
 import TokenomicDog from '../TokenomicDog';
+import LineTextBanner from '../LineTextBanner';
 
 const TokenomicsSection = () => {
     return (
         <StyledTokenomicsSection id="tokenomics">
-            <StyledPageLine>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-
-            </StyledPageLine>
+            <LineTextBanner />
 
             <div className='tokenomics-cards-container'>
                 <TokenomicCard

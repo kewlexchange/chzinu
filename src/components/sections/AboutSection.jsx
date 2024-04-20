@@ -1,41 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { StyledAboutSection, StyledPageLine } from '../styledComponents/Containers';
+import { StyledAboutSection } from '../styledComponents/Containers';
+import LineTextBanner from '../LineTextBanner';
 
 const AboutSection = () => {
 
     return (
         <StyledAboutSection id='about'>
-            <StyledPageLine>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-                <div className='line-row'>
-                    <div className="line-item">
-                        <img src='./dog-inu.png'/>
-                        <p>CHILLIZ PET</p>
-                        <img src='./dog-inu.png'/>
-                    </div>
-                </div>
-
-            </StyledPageLine>
+           <LineTextBanner carouselDirection={'left'}/>
         </StyledAboutSection>
     );
 }

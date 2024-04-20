@@ -1,11 +1,6 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/system";
 
-// border-radius: 8px
-// background-color: rgb(255, 255, 255);
-// box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-// border: 1px solid lightgray;
-
 
 export const StyledFlexCenterContainer = styled('div')`
     display: flex;
@@ -301,9 +296,9 @@ export const StyledPageLine = styled('div')`
     position: relative;
     top: 0;
     width: 200%;
-    background: #ce0001;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    background: #ff6b6b;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     display: flex;
 
     
@@ -324,14 +319,12 @@ export const StyledPageLine = styled('div')`
             justify-content: center;
 
             p{
-                color: white;
-                text-decoration: none;
-                font-family: fantasy;
-                font-family: monospace;
-
-                font-weight: 600;
+                margin: 30px 0;
+                font-family: "Luckiest Guy";
+                font-weight: 700;
+                font-style: normal;
                 font-size: 40px;
-                // letter-spacing: 0.1em;
+                letter-spacing: 0.1em;
             }
 
             img{
@@ -343,7 +336,7 @@ export const StyledPageLine = styled('div')`
 
     @keyframes line-2{
         0% {
-            transform: translateX(-100%);
+            transform: ${({direction}) => direction === 'left'  ? 'translateX(100%)' : 'translateX(-100%)'};
         }
         100% {
             transform: translateX(0);
