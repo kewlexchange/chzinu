@@ -166,14 +166,6 @@ export const StyledHomeContainer = styled('div')`
                 display: inline-block;
                 font-size: 130px;
             }
-
-            img{
-                position: absolute;
-                top: 10%;
-                width: 180px;
-            }
-
-
         }
 
         p{
@@ -212,13 +204,7 @@ export const StyledHomeContainer = styled('div')`
 
             
         }
-        .rocket-dog{
-            position: absolute;
-            right: 0;
-            bottom: -50px;
-            transform: rotate(-35deg); /* Rotar 35 grados hacia la izquierda */
-            width: 150px;
-        }
+       
 
 
         .buttons-container{
@@ -252,9 +238,12 @@ export const StyledHomeSection = styled(StyledSection)`
 `
 
 export const StyledAboutSection = styled(StyledSection)`
-    width: 80%;
+    width: 100%;
     display: flex;
     height: 100vh;
+    overflow: hidden;
+    align-items: flex-start;
+
 `
 export const StyledHowToBuySection = styled(StyledSection)`
     width: 80%;
@@ -290,5 +279,169 @@ export const StyledHomeButton = styled(Button)`
         color: #ce0001;
     }
 
+
+`
+
+
+export const StyledPageLine = styled('div')`
+    position: relative;
+    top: 0;
+    width: 200%;
+    background: #fff;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+
+
+    .line-row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-wrap: nowrap;
+        overflow: hidden;
+        animation: line-2 4s linear infinite;
+
+        .line-item{
+        width: 100%;
+            margin: 0 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                color: black;
+                text-decoration: none;
+                font-family: fantasy;
+                font-weight: 600;
+                font-size: 40px;
+                letter-spacing: 0.06em;
+            }
+
+            img{
+                width: 80px;
+            }
+        }
+    }
+
+
+    @keyframes line-2{
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+`
+
+
+export const StyledRocketDog = styled('div')`
+    .rocket-dog{
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        transform: rotate(-35deg); 
+        width: 150px;
+        transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
+
+        &:hover {
+            transform: scale(1.1) rotate(-35deg); /* Escalar al 110% y mantener la rotación */
+            bottom: -40px; /* Mover hacia arriba */
+        }
+    }
+
+
+    .bubble-dog{
+        position: absolute;
+        right: 0;
+        z-index: 999999;
+        bottom: 150px;
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+        font-family: "Press Start 2P", cursive;
+        font-size: 16px;
+        line-height: 1.3em;
+        background-color: #fff;
+        color: #000;
+        padding: 12px;
+        box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
+        box-sizing: border-box;
+        width: 200px;
+
+
+        &:after{
+            position: absolute;
+            z-index: 999999;
+            content: "";
+            height: 4px;
+            width: 4px;
+            bottom: -8px;
+            left: 90px; 
+            background-color: #fff;
+            box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+            // transform: rotate(35deg); /* Rotar el piquito */
+
+        }
+    }
+`
+
+
+export const StyledShibDog = styled('div')`
+    .shib-dog{
+        position: absolute;
+        top: 10%;
+        right: 12%;
+        width: 180px;
+        transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
+
+        &:hover {
+            transform: scale(1.1) rotate(-35deg); /* Escalar al 110% y mantener la rotación */
+            bottom: -40px; /* Mover hacia arriba */
+        }
+    }
+
+    .bubble-dog{
+        display: none;
+    }
+
+    &:hover{
+        .bubble-dog{
+            position: absolute;
+            right: 12%;
+            z-index: 999999;
+            top: -10px;
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+            font-family: "Press Start 2P", cursive;
+            font-size: 16px;
+            line-height: 1.3em;
+            background-color: #fff;
+            color: #000;
+            padding: 12px;
+            box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
+            box-sizing: border-box;
+            width: 200px;
+    
+    
+            &:after{
+                position: absolute;
+                z-index: 999999;
+                content: "";
+                height: 4px;
+                width: 4px;
+                bottom: -8px;
+                left: 90px; 
+                background-color: #fff;
+                box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+                // transform: rotate(35deg); /* Rotar el piquito */
+    
+            }
+        }
+
+    }
 
 `
