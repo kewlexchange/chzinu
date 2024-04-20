@@ -102,10 +102,10 @@ export const StyledNavBar = styled('div')`
         justify-content: center;
         a{
         cursor: pointer;
-
+            font-size: 18px;
             color: #ce0001;
             text-decoration: none;
-            font-family: "Varela Round", sans-serif;
+            font-family: monospace;
             font-weight: bold;
             font-style: normal;
             transition: all 0.3s ease-in;
@@ -145,7 +145,7 @@ export const StyledHomeContainer = styled('div')`
         height: 100%;
         color: #393939;
         text-decoration: none;
-        font-family: "Varela Round", sans-serif;
+        font-family: monospace;
         font-weight: bold;
         font-style: normal;
         display: flex;
@@ -160,7 +160,7 @@ export const StyledHomeContainer = styled('div')`
                 color: #ce0001;
 
                 text-shadow: 0 0.0377358491em 0 #000, 0.0125786164em 0.0377358491em 0 #000, 0.0125786164em -0.0125786164em 0 #000, -0.0125786164em 0.0125786164em 0 #000, -0.0125786164em -0.0125786164em 0 #000;
-                font-family: sans-serif;
+                font-family: monospace;
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
                 display: inline-block;
@@ -169,6 +169,7 @@ export const StyledHomeContainer = styled('div')`
 
             img{
                 position: absolute;
+                top: 10%;
                 width: 180px;
             }
 
@@ -182,6 +183,7 @@ export const StyledHomeContainer = styled('div')`
         .contract-address{
             font-size: 22px;
             margin-top: -1.5em;
+            margin-left: 3em;
             cursor: pointer;
             span{
                 transition: all .2s ease;
@@ -195,6 +197,7 @@ export const StyledHomeContainer = styled('div')`
         .text-1{
             font-size: 40px;
             margin-top: -20px;
+            margin-left: 4em;
 
             span{
                 color: #ce0001;
@@ -203,8 +206,8 @@ export const StyledHomeContainer = styled('div')`
 
         .text-2{
             text-align: center;
-            margin: 0 4em 3em 0;
-            font-size: 35px;
+            margin: 0 3em -0.5em 0;
+            font-size: 40px;
             overflow: hidden;
 
             
@@ -220,7 +223,7 @@ export const StyledHomeContainer = styled('div')`
 
         .buttons-container{
             width: 100%;
-            margin: 2em 8em;
+            margin: 0 12em 10em;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -269,11 +272,12 @@ export const StyledHomeButton = styled(Button)`
     width: 240px;
     padding: 0 30px;
     border-radius: 20px;
-    font-size: 25px !important;
+    font-size: 30px !important;
     margin: 10px 15px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     color: white;
     background-color: #ce0001;
+    font-family: monospace;
 
 
     &:hover{
