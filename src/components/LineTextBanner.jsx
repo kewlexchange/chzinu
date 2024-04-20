@@ -2,7 +2,7 @@ import React from "react";
 import { StyledPageLine } from "./styledComponents/Containers";
 
 export default function LineTextBanner({carouselDirection}) {
-  return  <StyledPageLine direction={carouselDirection}>
+  return  <StyledPageLine >
   <div className='line-row'>
       <div className="line-item">
           <img src='./dog-inu.png'/>

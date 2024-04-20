@@ -237,9 +237,10 @@ export const StyledAboutSection = styled(StyledSection)`
     display: flex;
     height: 120vh;
     align-items: flex-start;
-
+    overflow: hidden;
 
     .about-us-container{
+
         position: absolute;
         width: 80%;
         height: 80%;
@@ -333,12 +334,11 @@ export const StyledPageLine = styled('div')`
         justify-content: space-between;
         align-items: center;
         text-wrap: nowrap;
-        overflow: hidden;
         animation: line-2 4s linear infinite;
 
         .line-item{
             width: 100%;
-            margin: 0 180px;
+            margin: 0 100px;
             display: flex;
             align-items: center;
             justify-content: center;
