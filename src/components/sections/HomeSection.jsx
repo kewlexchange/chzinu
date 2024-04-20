@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileContract } from '@fortawesome/free-solid-svg-icons';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { useTypingText } from '../hooks/useTypingText';
+import RocketDog from '../RocketDog';
+import ShibDog from '../ShibDog';
 
 const HomeSection = () => {
     const { word, stop, start } = useTypingText(
@@ -27,14 +29,14 @@ const HomeSection = () => {
                             <span className='animate__animated animate__fadeIn animate__fast' style={{marginLeft:'40px'}}>I</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>N</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>U</span>
-                            <img src='./dog-inu.png'/>
+                            <ShibDog/>
                         </h1>
                         <p className='text-1 animate__animated animate__fadeIn animate__fast'>The first Chilliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
                     
                     </div>
                     
                     <div className='home-info-container'>
-                        <p className='text-2 animate__animated animate__fadeIn animate__fast'><p>JOIN TO OUR MISSION.</p></p>
+                        <p className='text-2 animate__animated animate__fadeIn animate__fast'><p>JOIN OUR MISSION</p></p>
                         <div className='buttons-container'>
                             <StyledHomeButton
                             className='animate__animated animate__fadeIn animate__fast'
@@ -53,7 +55,7 @@ const HomeSection = () => {
                         </div>
                         {/* <p className='text-3 animate__animated animate__fadeIn animate__fast'>Build, trust, educate, and bark our way through the Chiliz universe.</p> */}
                     </div>
-                    <img className="rocket-dog" src="./dog-rocket.png"/>
+                    <RocketDog/>
                     
                     <p className='contract-address animate__animated animate__fadeIn animate__fast'><strong>CONTRACT ADDRESS: </strong><span>0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001 <FontAwesomeIcon icon={faCopy} size='1x'/></span></p>
 
