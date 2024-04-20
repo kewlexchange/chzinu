@@ -48,7 +48,7 @@ const HomeSection = () => {
                             <StyledHomeButton
                                 className='animate__animated animate__fadeIn animate__fast'
                                 variant='contained'
-                                onClick={() => window.open('https://www.chiliz.net/exchange/CHZ2_INU/CHZ', '_blank')}
+                                onClick={() => window.open('https://www.coingecko.com/es/monedas/chiliz-inu', '_blank')}
                                 >
                                 View chart
                             </StyledHomeButton>

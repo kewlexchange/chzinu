@@ -44,7 +44,7 @@ export const StyledAppContainer = styled('div')`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(to bottom, #ffffff, #fdf8e5);
+    background: linear-gradient(to bottom, #ffffff, #98c63c);
 
 `
 
@@ -279,11 +279,13 @@ export const StyledHomeButton = styled(Button)`
     color: white;
     background-color: #ce0001;
     font-family: monospace;
+    border: 1px solid transparent;
 
 
     &:hover{
-        background-color: white;
-        color: #ce0001;
+        border: 1px solid black;
+        background-color: #98c63c;
+        color: white;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 
@@ -299,12 +301,12 @@ export const StyledPageLine = styled('div')`
     position: relative;
     top: 0;
     width: 200%;
-    background: #fff;
+    background: #ce0001;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     display: flex;
 
-
+    
     .line-row{
         width: 100%;
         display: flex;
@@ -322,12 +324,14 @@ export const StyledPageLine = styled('div')`
             justify-content: center;
 
             p{
-                color: black;
+                color: white;
                 text-decoration: none;
                 font-family: fantasy;
+                font-family: monospace;
+
                 font-weight: 600;
                 font-size: 40px;
-                letter-spacing: 0.06em;
+                // letter-spacing: 0.1em;
             }
 
             img{
@@ -461,12 +465,12 @@ export const StyledTokenomicCard = styled('div')`
     flex-direction: column;
     align-items: center;
     justify-content:  flex-start;
-    background-color: white;
     border: 1px solid black;
     transition: transform 0.3s ease; /* Añadimos la propiedad bottom a la transición */
     padding-top: 1em;
     margin: ${({cardnumber}) => cardnumber === '1' ? '20em 4em 0 0' : cardnumber === '3' ? '38em 0 0 4em' : '0'};
-
+    background-color: white;
+    color:black;
     &:hover {
         transform: scale(1.1); /* Escalar al 110% y mantener la rotación */
         z-index:999;
