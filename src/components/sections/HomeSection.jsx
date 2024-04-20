@@ -1,12 +1,11 @@
 import React from 'react';
-import { StyledHomeButton, StyledHomeContainer, StyledHomeSection, StyledSection } from '../styledComponents/Containers';
-import {Button} from '@mui/material'
+import { StyledHomeButton, StyledHomeContainer, StyledHomeSection } from '../styledComponents/Containers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileContract } from '@fortawesome/free-solid-svg-icons';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { useTypingText } from '../hooks/useTypingText';
 import RocketDog from '../RocketDog';
 import ShibDog from '../ShibDog';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 const HomeSection = () => {
     const { word, stop, start } = useTypingText(
@@ -14,6 +13,31 @@ const HomeSection = () => {
         130,
         20
       );
+
+      const copied = (e, a) => {
+        var x = e.clientX;
+        var y = e.clientY;
+        let exist = document.getElementById('-copied');
+        const span = () => {
+            var dummy = document.createElement("span");
+            dummy.setAttribute('id', '-copied')
+            dummy.setAttribute('style', 'position: absolute; opacity: 1; transition: all 0.15s ease-in-out; color: #555555; background: #e2e2e2; border-radius: 6px; padding: 5px; top:'+(y - 30) +'px; left:'+(x)+'px;')
+            dummy.innerHTML = 'Copied'
+            e.target.appendChild(dummy);
+            setTimeout(()=>{
+                dummy.setAttribute('style', 'position: absolute; opacity: 0; transition: all 0.15s ease-in-out; color: #555555; background: #e2e2e2; border-radius: 6px; padding: 5px; top:'+(y - 30) +'px; left:'+(x)+'px;')
+                setTimeout(()=>{
+                dummy.remove()
+                }, 150)
+            }, 500)
+        }
+        if(!exist) {
+            span()
+        } else {
+            exist.remove()
+            span()
+        }
+    }
     return (
         <StyledHomeSection 
         id="home">
@@ -56,8 +80,9 @@ const HomeSection = () => {
                         {/* <p className='text-3 animate__animated animate__fadeIn animate__fast'>Build, trust, educate, and bark our way through the Chiliz universe.</p> */}
                     </div>
                     <RocketDog/>
-                    
-                    <p className='contract-address animate__animated animate__fadeIn animate__fast'><strong>CONTRACT ADDRESS: </strong><span>0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001 <FontAwesomeIcon icon={faCopy} size='1x'/></span></p>
+                    <p 
+                    onClick={(evt) => copied(evt, dam_url)}
+                    className='contract-address animate__animated animate__fadeIn animate__fast'><strong>CONTRACT ADDRESS: </strong><CopyToClipboard text={'0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001'}><span>0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001 <FontAwesomeIcon icon={faCopy} size='1x'/></span></CopyToClipboard> </p>
 
                 </div>
 
