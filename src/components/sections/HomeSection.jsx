@@ -13,9 +13,10 @@ const HomeSection = () => {
         20
       );
     return (
-        <StyledHomeSection id="home">
+        <StyledHomeSection 
+        id="home">
             <StyledHomeContainer>
-                <img src='./home_background.jpeg' className='animate__animated animate__zoomIn animate__slower'/>
+                <img src='./home_background.png' className='animate__animated animate__zoomIn animate__slower'/>
 
                 <div className='home-text-container'>
                     <div className='home-title-container'>
@@ -35,19 +36,20 @@ const HomeSection = () => {
                     
                     <div>
                     <div className='home-info-container'>
-                        <p className='text-2 animate__animated animate__fadeIn animate__fast'>Build, trust, educate, and bark our way through the Chiliz universe. <img src="./dog-rocket.png"/></p>
+                        <p className='text-2 animate__animated animate__fadeIn animate__fast'><p>We’re a community on a mission.</p></p>
+                        {/* <p className='text-3 animate__animated animate__fadeIn animate__fast'>Build, trust, educate, and bark our way through the Chiliz universe.</p> */}
                     </div>
-
+                    <img className="rocket-dog" src="./dog-rocket.png"/>
                     <div className='buttons-container'>
                         <StyledHomeButton
                         className='animate__animated animate__fadeIn animate__fast'
                             variant='contained'
                             onClick={() => window.open('https://www.kewl.exchange/swap', '_blank')}
                             >
-                            Buy $CHZINU
+                            Buy
                         </StyledHomeButton>
                         <StyledHomeButton
-                        className='animate__animated animate__fadeIn animate__fast'
+                            className='animate__animated animate__fadeIn animate__fast'
                             variant='contained'
                             onClick={() => window.open('https://www.chiliz.net/exchange/CHZ2_INU/CHZ', '_blank')}
                             >

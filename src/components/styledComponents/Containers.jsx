@@ -44,7 +44,8 @@ export const StyledAppContainer = styled('div')`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #fdf8e5;
+    background: linear-gradient(to bottom, #ffffff, #fdf8e5);
+
 `
 
 
@@ -53,6 +54,7 @@ export const StyledNavBar = styled('div')`
     margin: 0 auto;
     position: absolute;
     top: 5%;
+    left: 5%;
     transform: translate(-50%, -50%);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
     background-color: rgb(255, 255, 255);
@@ -61,8 +63,8 @@ export const StyledNavBar = styled('div')`
     justify-content: flex-start;
     align-items: center;
     padding: 0 10px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border: 1px solid black;
-
     .logo-img{
         cursor: pointer;
         width: 15%;
@@ -70,7 +72,7 @@ export const StyledNavBar = styled('div')`
         justify-content: center;
         align-items: center;
         position: relative;
-
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         &:hover{
             animation: logo-spin 1.2s;
         }
@@ -126,8 +128,6 @@ export const StyledNavBar = styled('div')`
 export const StyledHomeContainer = styled('div')`
     width: 100%;
     height: 70%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;    
-    background-color: #fdf8e5;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
@@ -135,7 +135,7 @@ export const StyledHomeContainer = styled('div')`
     justify-content: space-between;
 
     img{
-        width: 580px;
+        width: 800px;
         border-radius: 8px;
 
     }
@@ -143,7 +143,7 @@ export const StyledHomeContainer = styled('div')`
     .home-text-container{
         width: 100%;
         height: 100%;
-        color: #ce0001;
+        color: #393939;
         text-decoration: none;
         font-family: "Varela Round", sans-serif;
         font-weight: bold;
@@ -153,10 +153,12 @@ export const StyledHomeContainer = styled('div')`
         justify-content: space-between;
 
         h1{
-            width: 100%;
-            margin-top: -2em;
+            width: 80%;
+            margin-top: -5em;
+            text-align:center;
             span{
                 color: #ce0001;
+
                 text-shadow: 0 0.0377358491em 0 #000, 0.0125786164em 0.0377358491em 0 #000, 0.0125786164em -0.0125786164em 0 #000, -0.0125786164em 0.0125786164em 0 #000, -0.0125786164em -0.0125786164em 0 #000;
                 font-family: sans-serif;
                 letter-spacing: 0.02em;
@@ -201,45 +203,27 @@ export const StyledHomeContainer = styled('div')`
 
         .text-2{
             text-align: center;
-            margin: 0 4em 2em 0;
+            margin: 0 4em 3em 0;
             font-size: 35px;
             overflow: hidden;
 
-            img{
-                position: absolute;
-                rigth: 0;
-                margin-left: 7.5em;
-                margin-top: 1em;
-                transform: rotate(-35deg); /* Rotar 35 grados hacia la izquierda */
-                width: 150px;
-            }
-
+            
+        }
+        .rocket-dog{
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            transform: rotate(-35deg); /* Rotar 35 grados hacia la izquierda */
+            width: 150px;
         }
 
 
         .buttons-container{
             width: 100%;
-            margin: 2em auto;
+            margin: 2em 8em;
             display: flex;
             flex-direction: row;
-            align-items: flex-start;
-            
-
-            button{
-                width: 240px;
-                padding: 0 30px;
-                border-radius: 20px;
-                font-size: 25px !important;
-                border: 2px solid transparent;
-                margin: 10px 15px;
-                
-                &:hover{
-                    color: black;
-                    opacity: 0.9 !important;
-                    border: 2px solid black;
-                }
-
-            }
+            align-items: center;
         }
         
     }
@@ -282,10 +266,24 @@ export const StyledTokenomicsSection = styled(StyledSection)`
 
 
 export const StyledHomeButton = styled(Button)`
+    width: 240px;
+    padding: 0 30px;
+    border-radius: 20px;
+    font-size: 25px !important;
+    margin: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    color: white;
     background-color: #ce0001;
+
+
     &:hover{
-        background-color: #ce0001;
-        opacity: 0.8;
+        background-color: white;
+        color: #ce0001;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    &:active{
+        color: #ce0001;
     }
 
 
