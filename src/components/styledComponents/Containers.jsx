@@ -436,21 +436,23 @@ export const StyledShibDog = styled('div')`
         
     .bubble-dog{
         position: absolute;
-        right: 18%;
+        right: 17%;
         z-index: 999999;
         top: -2px;
-        display: inline-block;
+        justify-content: center;
+        display: flex;
+        align-items: center;
         margin: 20px;
         text-align: center;
         font-family: "Press Start 2P", cursive;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 1.3em;
         background-color: #fff;
         color: #000;
         padding: 12px;
         box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
         box-sizing: border-box;
-        width: 120px;
+        width: 140px;
 
         &:after{
             position: absolute;
@@ -464,6 +466,17 @@ export const StyledShibDog = styled('div')`
             box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
             // transform: rotate(35deg); /* Rotar el piquito */
 
+        }
+
+
+        svg{
+            font-size: 24px;
+            cursor: pointer;
+            margin: 4px;
+            transition: all 0.2s ease;
+            &:hover{
+                color: #1c93e3;
+            }
         }
     }
 
@@ -543,3 +556,35 @@ export const StyledTokenomicDog = styled('div')`
 
 
 `
+
+
+
+export const StyledFooterSection = styled(StyledSection)`
+    width: 70%;
+    display: flex;
+    height: auto;
+    padding-bottom: 1em;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+        text-align: center;
+        margin: 15px px;
+    }
+
+    img{
+        width: 80px;
+        border-radius: 50%;        
+    }
+
+    .contact-logos{
+        height: auto;
+        right: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-size: 50px;
+        margin-right: 10px;
+    }
+`
+
