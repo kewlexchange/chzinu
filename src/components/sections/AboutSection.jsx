@@ -7,28 +7,28 @@ const AboutSection = () => {
         <StyledAboutSection id='about'>
             <StyledPageLine>
                 <div className='line-row'>
-                    <div class="line-item">
+                    <div className="line-item">
                         <img src='./dog-inu.png'/>
                         <p>CHILLIZ PET</p>
                         <img src='./dog-inu.png'/>
                     </div>
                 </div>
                 <div className='line-row'>
-                    <div class="line-item">
+                    <div className="line-item">
                         <img src='./dog-inu.png'/>
                         <p>CHILLIZ PET</p>
                         <img src='./dog-inu.png'/>
                     </div>
                 </div>
                 <div className='line-row'>
-                    <div class="line-item">
+                    <div className="line-item">
                         <img src='./dog-inu.png'/>
                         <p>CHILLIZ PET</p>
                         <img src='./dog-inu.png'/>
                     </div>
                 </div>
                 <div className='line-row'>
-                    <div class="line-item">
+                    <div className="line-item">
                         <img src='./dog-inu.png'/>
                         <p>CHILLIZ PET</p>
                         <img src='./dog-inu.png'/>

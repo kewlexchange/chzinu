@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar.jsx';
 import AboutSection from './components/sections/AboutSection.jsx';
 import HomeSection from './components/sections/HomeSection.jsx';
+import TokenomicsSection from './components/sections/TokenomicsSection.jsx';
 import { StyledAppContainer } from './components/styledComponents/Containers.jsx'
 
 
@@ -13,8 +14,8 @@ export default function App() {
         <StyledAppContainer>
             <Navbar/>
             <HomeSection/>
+            <TokenomicsSection/>
             <AboutSection/>
-
         </StyledAppContainer>
     );
 }

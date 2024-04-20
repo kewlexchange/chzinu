@@ -6,6 +6,8 @@ body,
     padding: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    user-select: none; /* Evitar que se seleccione el texto dentro de .shib-dog */
+
 
 }
 

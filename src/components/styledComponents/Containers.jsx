@@ -251,9 +251,21 @@ export const StyledHowToBuySection = styled(StyledSection)`
     height: 100vh;
 `
 export const StyledTokenomicsSection = styled(StyledSection)`
-    width: 80%;
+    width: 100%;
     display: flex;
-    height: 100vh;
+    height: 120vh;
+    align-items: flex-start;
+
+
+    .tokenomics-cards-container{
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        margin-top: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 
@@ -303,8 +315,8 @@ export const StyledPageLine = styled('div')`
         animation: line-2 4s linear infinite;
 
         .line-item{
-        width: 100%;
-            margin: 0 120px;
+            width: 100%;
+            margin: 0 180px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -396,52 +408,116 @@ export const StyledShibDog = styled('div')`
         right: 12%;
         width: 180px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
-
-        &:hover {
-            transform: scale(1.1) rotate(-35deg); /* Escalar al 110% y mantener la rotación */
-            bottom: -40px; /* Mover hacia arriba */
-        }
     }
 
+
+        
     .bubble-dog{
-        display: none;
-    }
+        position: absolute;
+        right: 18%;
+        z-index: 999999;
+        top: -2px;
+        display: inline-block;
+        margin: 20px;
+        text-align: center;
+        font-family: "Press Start 2P", cursive;
+        font-size: 16px;
+        line-height: 1.3em;
+        background-color: #fff;
+        color: #000;
+        padding: 12px;
+        box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
+        box-sizing: border-box;
+        width: 120px;
 
-    &:hover{
-        .bubble-dog{
+        &:after{
             position: absolute;
-            right: 12%;
             z-index: 999999;
-            top: -10px;
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
-            font-family: "Press Start 2P", cursive;
-            font-size: 16px;
-            line-height: 1.3em;
+            content: "";
+            height: 4px;
+            width: 4px;
+            bottom: -8px;
+            left: 90px; 
             background-color: #fff;
-            color: #000;
-            padding: 12px;
-            box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
-            box-sizing: border-box;
-            width: 200px;
-    
-    
-            &:after{
-                position: absolute;
-                z-index: 999999;
-                content: "";
-                height: 4px;
-                width: 4px;
-                bottom: -8px;
-                left: 90px; 
-                background-color: #fff;
-                box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
-                // transform: rotate(35deg); /* Rotar el piquito */
-    
-            }
+            box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+            // transform: rotate(35deg); /* Rotar el piquito */
+
         }
+    }
+
+    
+
+`
+
+
+export const StyledTokenomicCard = styled('div')`
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+    padding: 1em;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content:  flex-start;
+    background-color: white;
+    border: 1px solid black;
+    transition: transform 0.3s ease; /* Añadimos la propiedad bottom a la transición */
+    padding-top: 1em;
+    margin: ${({cardnumber}) => cardnumber === '1' ? '20em 4em 0 0' : cardnumber === '3' ? '38em 0 0 4em' : '0'};
+
+    &:hover {
+        transform: scale(1.1); /* Escalar al 110% y mantener la rotación */
+        z-index:999;
 
     }
+
+    h2{
+        font-family: monospace;
+        font-family: fantasy;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 2.5em;
+        letter-spacing: 0.06em;
+        font-weight: bold;
+        color: black;
+        text-align: left;
+        width: 100%;
+        margin-left: 1em;
+    }   
+
+
+    p{
+        margin: 1em;
+        font-family: monospace;
+        text-transform: uppercase;
+        margin: 1em;
+        font-size: 1.5em;
+        letter-spacing: 0.06em;
+        font-weight: bold;
+    }
+
+    .budget{
+        position: absolute;
+        border-radius: 50%;
+        width: 100px;
+        bottom: -20px;
+        right: -20px;
+
+    }
+`
+
+
+export const StyledTokenomicDog = styled('div')`
+    .tokenomic-dog{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 400px;
+        transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
+    }
+
+
 
 `
