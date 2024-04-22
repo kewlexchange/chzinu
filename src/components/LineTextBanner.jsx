@@ -6,35 +6,35 @@ export default function LineTextBanner({carouselDirection}) {
   <div className='line-row'>
       <div className="line-item">
           <img src='./dog-inu.png'/>
-          <p>CHILLIZ PET</p>
+          <p>CHILIZ PET</p>
           <img src='./dog-inu.png'/>
       </div>
   </div>
   <div className='line-row'>
       <div className="line-item">
           <img src='./dog-inu.png'/>
-          <p>CHILLIZ PET</p>
+          <p>CHILIZ PET</p>
           <img src='./dog-inu.png'/>
       </div>
   </div>
   <div className='line-row'>
       <div className="line-item">
           <img src='./dog-inu.png'/>
-          <p>CHILLIZ PET</p>
+          <p>CHILIZ PET</p>
           <img src='./dog-inu.png'/>
       </div>
   </div>
   <div className='line-row'>
       <div className="line-item">
           <img src='./dog-inu.png'/>
-          <p>CHILLIZ PET</p>
+          <p>CHILIZ PET</p>
           <img src='./dog-inu.png'/>
       </div>
   </div>
   <div className='line-row'>
       <div className="line-item">
           <img src='./dog-inu.png'/>
-          <p>CHILLIZ PET</p>
+          <p>CHILIZ PET</p>
           <img src='./dog-inu.png'/>
       </div>
   </div>

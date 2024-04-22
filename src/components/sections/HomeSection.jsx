@@ -55,7 +55,7 @@ const HomeSection = () => {
                             <span className='animate__animated animate__fadeIn animate__fast'>U</span>
                             <ShibDog/>
                         </h1>
-                        <p className='text-1 animate__animated animate__fadeIn animate__fast'>The first Chilliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
+                        <p className='text-1 animate__animated animate__fadeIn animate__fast'>The first Chiliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
                     
                     </div>
                     
