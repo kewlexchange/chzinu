@@ -288,14 +288,14 @@ export const StyledHowToBuySection = styled(StyledSection)`
     display: flex;
     height: 100vh;
 `
-export const StyledTokenomicsSection = styled(StyledSection)`
+export const StyledTeamSection = styled(StyledSection)`
     width: 100%;
     display: flex;
     height: 120vh;
     align-items: flex-start;
 
 
-    .tokenomics-cards-container{
+    .team-cards-container{
         position: absolute;
         width: 100%;
         height: 60%;
@@ -303,6 +303,40 @@ export const StyledTokenomicsSection = styled(StyledSection)`
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+`
+export const StyledTokenomicsSection = styled(StyledSection)`
+    width: 100%;
+    display: flex;
+    height: 120vh;
+    align-items: flex-start;
+
+
+    .tokenomics-pie-container{
+        position: absolute;
+        width: 100%;
+        margin-top: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        .pie-container{
+            margin-top: 2em;
+            h2{
+                width: 100%;
+                text-align:center;
+                font-family: fantasy;
+                text-transform: uppercase;
+                font-size: 50px;
+                letter-spacing: 0.1em;
+                margin-top: 1em;
+                margin-bottom: 0;
+            }
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            border-radius: 20px;
+            background: #ffffff;
+        }
     }
 `
 
