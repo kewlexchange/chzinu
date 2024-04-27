@@ -301,24 +301,26 @@ export const StyledTeamSection = styled(StyledSection)`
 export const StyledTokenomicsSection = styled(StyledSection)`
     width: 100%;
     display: flex;
-    height: 110vh;
+    height: 120vh;
     align-items: flex-start;
     position: relative;
     img{
         position: absolute;
-        left: 0%;
-        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -150px;
+        width: 350px;
     }
 
     .tokenomics-pie-container{
         position: absolute;
         width: 100%;
-        margin-top: 120px;
-        margin-right: 12em;
+        margin-top: 140px;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
+        z-index: 9999;
         
         .pie-container{
             margin-top: 2em;
@@ -336,7 +338,11 @@ export const StyledTokenomicsSection = styled(StyledSection)`
             border-radius: 20px;
             background: #ffffff;
         }
+    
+        
     }
+
+    
 `
 
 

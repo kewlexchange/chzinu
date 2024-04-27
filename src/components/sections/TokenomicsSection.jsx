@@ -8,9 +8,9 @@ import { positions } from '@mui/system';
 
 const TokenomicsSection = () => {
     return (
-        <StyledTokenomicsSection id="tokenomics">
-            <LineTextBanner />
-            <img src='./dog-tokenomics3.png'/>
+        <StyledTokenomicsSection >
+            {/* <LineTextBanner /> */}
+            <img src='./dog-tokenomics3.png' id="tokenomics"/>
 
             <div className='tokenomics-pie-container'>
                 <div className='pie-container'>
