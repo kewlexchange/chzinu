@@ -9,8 +9,9 @@ const Navbar = () => {
             </div>
             <div className='navbar-items'>
                 <a href="#about">ABOUT</a>
-                <a href="#tokenomics">TOKENOMICS</a>
-                <a href="https://medium.com/@chilizinu/introducing-chzinu-the-meme-tastic-reverse-rug-token-b61b80a6028d" target='blank'>WHITEPAPER</a>
+                <a href="#tokenomics">WOOF-NOMICS</a>
+                <a href="https://medium.com/@chilizinu/introducing-chzinu-the-meme-tastic-reverse-rug-token-b61b80a6028d" target='blank'>WOOFPAPER</a>
+                <a title="Coming soon" href="#tokenomics">PUPPY GUIDE</a>
                 {/* <a href="#buy" target='blank'>Buy</a> */}
             </div>
 

@@ -45,7 +45,7 @@ export const StyledAppContainer = styled('div')`
 
 
 export const StyledNavBar = styled('div')`
-    width: 30%;
+    width: 35%;
     margin: 0 auto;
     position: absolute;
     top: 5%;
@@ -62,7 +62,7 @@ export const StyledNavBar = styled('div')`
     border: 1px solid black;
     .logo-img{
         cursor: pointer;
-        width: 15%;
+        width: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -106,7 +106,7 @@ export const StyledNavBar = styled('div')`
             transition: all 0.3s ease-in;
             border-radius: 15px;
             padding: 8px;
-            margin: 12px 10px;
+            margin: 12px 5px;
 
 
             &:hover{
@@ -173,7 +173,7 @@ export const StyledHomeTitle = styled('div')`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 4em;
+    margin-top: 6em;
     h1{
         width: 100%;
         text-align: left;
