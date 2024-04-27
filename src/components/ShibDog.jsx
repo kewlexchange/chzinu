@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledShibDog } from "./styledComponents/Containers";
-import { faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faMedium, faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useScrollClick from "./hooks/useScrollClick";
 
@@ -9,8 +9,9 @@ export default function ShibDog() {
 
   return <StyledShibDog>
     <div class="bubble-dog">Woof! 
-          <FontAwesomeIcon size="1x" icon={faTelegram} style={{marginLeft: '8px'}}onClick={() => window.open('https://t.me/TheChilizInu', '_blank')}/>
-          <FontAwesomeIcon size="1x" icon={faTwitter} style={{backgroundColor:'transparent'}} onClick={() => window.open('https://twitter.com/ChilizInu', '_blank')}/>
+          <FontAwesomeIcon size="1x" icon={faTelegram} title="Telegram" style={{marginLeft: '8px'}}onClick={() => window.open('https://t.me/TheChilizInu', '_blank')}/>
+          <FontAwesomeIcon size="1x" icon={faTwitter} title="Twitter" style={{backgroundColor:'transparent'}} onClick={() => window.open('https://twitter.com/ChilizInu', '_blank')}/>
+          <FontAwesomeIcon size="1x" className="medium" title="Medium" icon={faMedium} onClick={() => window.open('https://medium.com/@chilizinu', '_blank')}/>
     </div>
     <img className="shib-dog" src="./dog-inu.png" onClick={scrollToTeam}/>
   </StyledShibDog>;

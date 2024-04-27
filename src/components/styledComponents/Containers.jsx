@@ -482,7 +482,7 @@ export const StyledShibDog = styled('div')`
         
     .bubble-dog{
         position: absolute;
-        right: 17%;
+        right: 14%;
         z-index: 999999;
         top: -2px;
         justify-content: center;
@@ -498,7 +498,7 @@ export const StyledShibDog = styled('div')`
         padding: 12px;
         box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
         box-sizing: border-box;
-        width: 140px;
+        width: 200px;
 
         &:after{
             position: absolute;
@@ -522,6 +522,14 @@ export const StyledShibDog = styled('div')`
             transition: all 0.2s ease;
             &:hover{
                 color: #1c93e3;
+            }
+        }
+
+
+        .medium{
+            &:hover{
+                background-color: black;
+                color: white;
             }
         }
     }
