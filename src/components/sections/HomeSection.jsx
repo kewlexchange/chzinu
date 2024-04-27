@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHomeButton, StyledHomeContainer, StyledHomeSection } from '../styledComponents/Containers';
+import { StyledHomeButton, StyledHomeContainer, StyledHomeSection, StyledHomeText, StyledHomeTitle } from '../styledComponents/Containers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { useTypingText } from '../hooks/useTypingText';
@@ -42,10 +42,12 @@ const HomeSection = () => {
         <StyledHomeSection 
         id="home">
             <StyledHomeContainer>
-                <img src='./home_background.png' className='animate__animated animate__zoomIn animate__slower'/>
+                <div className='home-img-container'>
+                    <img src='./home_background.png' className='animate__animated animate__zoomIn animate__slower'/>
+                </div>
 
                 <div className='home-text-container'>
-                    <div className='home-title-container'>
+                    <StyledHomeTitle>
                         <h1>
                             <span className='animate__animated animate__fadeIn animate__fast'>C</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>H</span>
@@ -55,12 +57,11 @@ const HomeSection = () => {
                             <span className='animate__animated animate__fadeIn animate__fast'>U</span>
                             <ShibDog/>
                         </h1>
-                        <p className='text-1 animate__animated animate__fadeIn animate__fast'>The first Chiliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
+                        <p className='animate__animated animate__fadeIn animate__fast'>The first Chiliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
+                    </StyledHomeTitle>
                     
-                    </div>
-                    
-                    <div className='home-info-container'>
-                        <p className='text-2 animate__animated animate__fadeIn animate__fast'><p>JOIN OUR MISSION</p></p>
+                    <StyledHomeText>
+                        <p className='text-2 animate__animated animate__fadeIn animate__fast'>JOIN OUR MISSION</p>
                         <div className='buttons-container'>
                             <StyledHomeButton
                             className='animate__animated animate__fadeIn animate__fast'
@@ -72,17 +73,18 @@ const HomeSection = () => {
                             <StyledHomeButton
                                 className='animate__animated animate__fadeIn animate__fast'
                                 variant='contained'
-                                onClick={() => window.open('https://www.coingecko.com/es/monedas/chiliz-inu', '_blank')}
+                                onClick={() => window.open('https://www.coingecko.com/en/coins/chiliz-inu', '_blank')}
                                 >
                                 View chart
                             </StyledHomeButton>
                         </div>
                         {/* <p className='text-3 animate__animated animate__fadeIn animate__fast'>Build, trust, educate, and bark our way through the Chiliz universe.</p> */}
-                    </div>
-                    <RocketDog/>
-                    <p 
-                    onClick={(evt) => copied(evt, dam_url)}
-                    className='contract-address animate__animated animate__fadeIn animate__fast'><strong>CONTRACT ADDRESS: </strong><CopyToClipboard text={'0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001'}><span>0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001 <FontAwesomeIcon icon={faCopy} size='1x'/></span></CopyToClipboard> </p>
+                        <RocketDog/>
+
+                    </StyledHomeText>
+                        <p 
+                        onClick={(evt) => copied(evt, dam_url)}
+                        className='contract-address animate__animated animate__fadeIn animate__fast'><strong>CONTRACT ADDRESS: </strong><CopyToClipboard text={'0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001'}><span>0xF3928e7871eb136DD6648Ad08aEEF6B6ea893001 <FontAwesomeIcon icon={faCopy} size='1x'/></span></CopyToClipboard> </p>
 
                 </div>
 

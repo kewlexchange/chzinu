@@ -122,51 +122,33 @@ export const StyledNavBar = styled('div')`
 
 export const StyledHomeContainer = styled('div')`
     width: 100%;
-    height: 70%;
-    border-radius: 8px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
 
-    img{
-        width: 800px;
-        border-radius: 8px;
-
+    .home-img-container{
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        img{
+            width: 550px;
+        }
     }
 
     .home-text-container{
         width: 100%;
         height: 100%;
         color: #393939;
-        text-decoration: none;
         font-family: monospace;
         font-weight: bold;
         font-style: normal;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-        h1{
-            width: 80%;
-            margin-top: -5em;
-            text-align:center;
-            span{
-                color: #ce0001;
-
-                text-shadow: 0 0.0377358491em 0 #000, 0.0125786164em 0.0377358491em 0 #000, 0.0125786164em -0.0125786164em 0 #000, -0.0125786164em 0.0125786164em 0 #000, -0.0125786164em -0.0125786164em 0 #000;
-                font-family: monospace;
-                letter-spacing: 0.02em;
-                text-transform: uppercase;
-                display: inline-block;
-                font-size: 130px;
-            }
-        }
-
-        p{
-            color: black;
-        }
-
+        align-items:flex-start;      
+        
         .contract-address{
             font-size: 22px;
             margin-top: -1.5em;
@@ -180,42 +162,77 @@ export const StyledHomeContainer = styled('div')`
                 }
             }
         }
-
-        .text-1{
-            font-size: 40px;
-            margin-top: -20px;
-            margin-left: 4em;
-
-            span{
-                color: #ce0001;
-            }
-        }
-
-        .text-2{
-            text-align: center;
-            margin: 0 3em -0.5em 0;
-            font-size: 40px;
-            overflow: hidden;
-
-            
-        }
-       
-
-
-        .buttons-container{
-            width: 100%;
-            margin: 0 12em 10em;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        
     }
 
 
 
 `;
 
+export const StyledHomeTitle = styled('div')`
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 4em;
+    h1{
+        width: 100%;
+        text-align: left;
+        margin-left: 4em;
+
+        span{
+            color: #ce0001;
+            text-shadow: 0 0.0377358491em 0 #000, 0.0125786164em 0.0377358491em 0 #000, 0.0125786164em -0.0125786164em 0 #000, -0.0125786164em 0.0125786164em 0 #000, -0.0125786164em -0.0125786164em 0 #000;
+            font-family: monospace;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: 5em;
+        }
+    }
+    p{
+        text-align: left;
+        width: 100%;
+        font-size: 2.5em;
+        margin-left: 4em;
+        margin-top: -20px;
+
+        span{
+            color: #ce0001;
+        }
+    }
+
+
+
+`
+
+export const StyledHomeText = styled('div')`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+
+
+    .text-2{
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
+
+
+    .buttons-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+`
 
 export const StyledSection = styled('div')`
     width: 80%;

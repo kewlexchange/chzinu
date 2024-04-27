@@ -13,14 +13,14 @@ const TokenomicsSection = () => {
                 <TokenomicCard
                     title={"Token supply"}
                     text={"We have an initial supply of 10,000,000,000 tokens! "}
-                    text2={"With 99% of the funds going straight into liquidity on KEWL Swap, we’re making sure $ChzInu trades smoothly."}
+                    text2={"With 99% of the presale going into liquidity on KEWL EXCHANGE, we’re making sure $ChzInu trades smoothly."}
                     buttonText={"SEE MORE"}
                     buttonFunction={() => console.log('hola')}
                     cardNumber={'1'}
                 />
                 <TokenomicCard
                     title={"Safe contract"}
-                    text={"The contract has no malicious functions. Has been audited for professional a team."}
+                    text={"The contract has no malicious functions and is verified on-chain since 29/10/2023."}
                     buttonText={"SEE MORE"}
                     buttonFunction={() => console.log('hola')}
                 />
