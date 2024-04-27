@@ -72,14 +72,7 @@ export const StyledNavBar = styled('div')`
             animation: logo-spin 1.2s;
         }
               
-        @keyframes logo-spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
+
 
         img{
             position: absolute;
@@ -217,7 +210,7 @@ export const StyledHomeText = styled('div')`
         width: 100%;
         text-align: center;
         font-size: 40px;
-        margin-top: 2em;
+        margin-top: 1.5em;
         margin-bottom: 0;
     }
 
@@ -430,6 +423,7 @@ export const StyledRocketDog = styled('div')`
         transform: rotate(-35deg); 
         width: 150px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
+        cursor: pointer;
 
         &:hover {
             transform: scale(1.1) rotate(-35deg); /* Escalar al 110% y mantener la rotación */
@@ -481,6 +475,7 @@ export const StyledShibDog = styled('div')`
         right: 12%;
         width: 180px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
+        cursor: pointer;
     }
 
 
@@ -556,7 +551,9 @@ export const StyledTokenomicCard = styled('div')`
     &:hover {
         transform: scale(1.1); /* Escalar al 110% y mantener la rotación */
         z-index:999;
-
+        .budget{
+            animation: logo-spin 1.2s;
+        }
     }
 
     h2{
@@ -617,6 +614,7 @@ export const StyledFooterSection = styled(StyledSection)`
     padding-bottom: 1em;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 
     p{
         text-align: center;
@@ -626,6 +624,9 @@ export const StyledFooterSection = styled(StyledSection)`
     img{
         width: 80px;
         border-radius: 50%;        
+        &:hover{
+            animation: logo-spin 1.2s;
+        }
     }
 
     .contact-logos{
@@ -636,6 +637,7 @@ export const StyledFooterSection = styled(StyledSection)`
         align-items: center;
         font-size: 50px;
         margin-right: 10px;
+
     }
 `
 

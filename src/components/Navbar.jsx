@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyledNavBar } from './styledComponents/Containers';
+import useScrollClick from './hooks/useScrollClick';
 
 const Navbar = () => {
+    const {scrollToTeam} = useScrollClick()
     return (
         <StyledNavBar className='animate__animated animate__fadeInDown animate__faster'>
             <div className='logo-img'>
-                <img src='./coin.jpg' alt='no-logo'/>
+                <img src='./coin.jpg' alt='no-logo' onClick={scrollToTeam}/>
             </div>
             <div className='navbar-items'>
                 <a href="#about">ABOUT</a>
