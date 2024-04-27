@@ -301,17 +301,23 @@ export const StyledTeamSection = styled(StyledSection)`
 export const StyledTokenomicsSection = styled(StyledSection)`
     width: 100%;
     display: flex;
-    height: 120vh;
+    height: 110vh;
     align-items: flex-start;
-
+    position: relative;
+    img{
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+    }
 
     .tokenomics-pie-container{
         position: absolute;
         width: 100%;
-        margin-top: 140px;
+        margin-top: 120px;
+        margin-right: 12em;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         flex-direction: column;
         
         .pie-container{
