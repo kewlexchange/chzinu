@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyledPageLine, StyledTokenomicsSection } from '../styledComponents/Containers';
-import TokenomicCard from '../TokenomicCard';
-import TokenomicDog from '../TokenomicDog';
-import LineTextBanner from '../LineTextBanner';
 import { PieChart, pieArcLabelClasses  } from '@mui/x-charts/PieChart';
-import { positions } from '@mui/system';
 
 const TokenomicsSection = () => {
     return (
