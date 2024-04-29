@@ -6,6 +6,7 @@ import RocketDog from '../RocketDog';
 import ShibDog from '../ShibDog';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { useTypingText } from '../../hooks/useTypingText';
+import ShamanDog from '../ShamanDog';
 
 const HomeSection = () => {
     const { word, stop, start } = useTypingText(
@@ -42,9 +43,7 @@ const HomeSection = () => {
         <StyledHomeSection 
         id="home">
             <StyledHomeContainer>
-                <div className='home-img-container'>
-                    <img src='./home_background.png' className='animate__animated animate__zoomIn animate__slower'/>
-                </div>
+                <ShamanDog/>
 
                 <div className='home-text-container'>
                     <StyledHomeTitle>
@@ -57,7 +56,11 @@ const HomeSection = () => {
                             <span className='animate__animated animate__fadeIn animate__fast'>U</span>
                             <ShibDog/>
                         </h1>
-                        <p className='animate__animated animate__fadeIn animate__fast'>The first Chiliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
+                        <div className='text-animated'>
+                            <div>
+                                <p className='animate__animated animate__fadeIn animate__fast'>The first Chiliz <span>{word?.props?.children?.props?.children !== '0' ? word?.props?.children?.props?.children : ''}</span></p>
+                            </div>
+                        </div>
                     </StyledHomeTitle>
                     
                     <StyledHomeText>

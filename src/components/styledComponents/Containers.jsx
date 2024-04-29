@@ -118,17 +118,9 @@ export const StyledHomeContainer = styled('div')`
     height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 
-    .home-img-container{
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        img{
-            width: 550px;
-        }
-    }
 
     .home-text-container{
         width: 100%;
@@ -140,7 +132,7 @@ export const StyledHomeContainer = styled('div')`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items:flex-start;      
+        align-items:center;      
         
         .contract-address{
             font-size: 22px;
@@ -166,11 +158,11 @@ export const StyledHomeTitle = styled('div')`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 6em;
+    margin-top: 7em;
     h1{
+
         width: 100%;
-        text-align: left;
-        margin-left: 4em;
+        text-align: center;
 
         span{
             color: #ce0001;
@@ -182,15 +174,24 @@ export const StyledHomeTitle = styled('div')`
             font-size: 5em;
         }
     }
-    p{
-        text-align: left;
-        width: 100%;
-        font-size: 2.5em;
-        margin-left: 4em;
-        margin-top: -20px;
 
-        span{
-            color: #ce0001;
+    .text-animated{
+        width: 100%;
+        margin-top: -60px;
+        display: flex;
+        justify-content: center;
+        div{
+            width: 30%;
+            text-align: left;
+            text-wrap: nowrap;
+            p{
+                font-size: 2.5em;
+        
+                span{
+                    color: #ce0001;
+                }
+            }
+
         }
     }
 
@@ -620,8 +621,18 @@ export const StyledTokenomicDog = styled('div')`
         width: 400px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
     }
+`
 
+export const StyledShamanDog = styled('div')`
+      .shamman-dog{
+        position: absolute;
+        margin-left: -2em;
+        left: 0%;
+        bottom: -50px;
+        width: 550px;
+        cursor: pointer;
 
+    }
 
 `
 
