@@ -322,7 +322,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        z-index: 9999;
+        // z-index: 9999;
         
         .pie-container{
             margin-top: 2em;
