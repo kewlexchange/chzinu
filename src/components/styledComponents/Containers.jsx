@@ -45,7 +45,7 @@ export const StyledAppContainer = styled('div')`
 
 
 export const StyledNavBar = styled('div')`
-    width: 35%;
+    width: 550px;
     margin: 0 auto;
     position: absolute;
     top: 5%;
@@ -60,6 +60,8 @@ export const StyledNavBar = styled('div')`
     padding: 0 10px 0 0;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border: 1px solid black;
+    z-index: 999; /* Asegura que el contenedor esté por encima de otros elementos */
+
     .logo-img{
         cursor: pointer;
         width: 10%;
@@ -110,7 +112,7 @@ export const StyledNavBar = styled('div')`
     
     }
 
-    z-index: 999; /* Asegura que el contenedor esté por encima de otros elementos */
+
 `;
 
 export const StyledHomeContainer = styled('div')`
@@ -137,7 +139,6 @@ export const StyledHomeContainer = styled('div')`
         .contract-address{
             font-size: 22px;
             margin-top: -1.5em;
-            margin-left: 3em;
             cursor: pointer;
             span{
                 transition: all .2s ease;
@@ -181,7 +182,7 @@ export const StyledHomeTitle = styled('div')`
         display: flex;
         justify-content: center;
         div{
-            width: 30%;
+            width: 470px;
             text-align: left;
             text-wrap: nowrap;
             p{
@@ -429,6 +430,10 @@ export const StyledPageLine = styled('div')`
 
 
 export const StyledRocketDog = styled('div')`
+    @media(max-width: 1300px){
+        display: none;
+    }
+
     .rocket-dog{
         position: absolute;
         right: 0;
@@ -545,9 +550,26 @@ export const StyledShibDog = styled('div')`
                 color: white;
             }
         }
+
+        
     }
 
-    
+    @media (max-width: 900px){
+        .shib-dog{
+            width: 140px;
+        }
+
+        .bubble-dog{
+            width: 150px;
+            font-size: 15px;
+
+            svg{
+                font-size: 20px;
+            }
+        }
+
+
+    }
 
 `
 
@@ -631,7 +653,10 @@ export const StyledShamanDog = styled('div')`
         bottom: -50px;
         width: 550px;
         cursor: pointer;
+    }
 
+    @media(max-width: 1300px){
+        display: none;
     }
 
 `
