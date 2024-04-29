@@ -2,10 +2,10 @@ import React from 'react';
 import { StyledHomeButton, StyledHomeContainer, StyledHomeSection, StyledHomeText, StyledHomeTitle } from '../styledComponents/Containers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
-import { useTypingText } from '../hooks/useTypingText';
 import RocketDog from '../RocketDog';
 import ShibDog from '../ShibDog';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { useTypingText } from '../../hooks/useTypingText';
 
 const HomeSection = () => {
     const { word, stop, start } = useTypingText(

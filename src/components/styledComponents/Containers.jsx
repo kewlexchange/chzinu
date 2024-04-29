@@ -484,7 +484,7 @@ export const StyledShibDog = styled('div')`
     .shib-dog{
         position: absolute;
         top: 10%;
-        right: 12%;
+        right: 0%;
         width: 180px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
         cursor: pointer;
@@ -494,7 +494,7 @@ export const StyledShibDog = styled('div')`
         
     .bubble-dog{
         position: absolute;
-        right: 14%;
+        right: 2%;
         z-index: 999999;
         top: -2px;
         justify-content: center;

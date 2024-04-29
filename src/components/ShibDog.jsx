@@ -2,7 +2,7 @@ import React from "react";
 import { StyledShibDog } from "./styledComponents/Containers";
 import { faMedium, faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useScrollClick from "./hooks/useScrollClick";
+import useScrollClick from "../hooks/useScrollClick";
 
 export default function ShibDog() {
   const {scrollToTeam} = useScrollClick()

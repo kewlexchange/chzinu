@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledNavBar } from './styledComponents/Containers';
-import useScrollClick from './hooks/useScrollClick';
+import useScrollClick from '../hooks/useScrollClick';
 
 const Navbar = () => {
     const {scrollToTeam} = useScrollClick()

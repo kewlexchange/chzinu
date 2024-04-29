@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledRocketDog } from "./styledComponents/Containers";
-import useScrollClick from "./hooks/useScrollClick";
+import useScrollClick from "../hooks/useScrollClick";
 
 export default function RocketDog() {
   const {scrollToTeam} = useScrollClick()
