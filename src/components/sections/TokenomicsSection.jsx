@@ -1,14 +1,37 @@
-import React from 'react';
-import { StyledPageLine, StyledTokenomicsSection } from '../styledComponents/Containers';
+import React, { useEffect, useState } from 'react';
+import { StyledPageLine, StyledPieChartMaterial, StyledTokenomicsSection } from '../styledComponents/Containers';
 import { PieChart, pieArcLabelClasses  } from '@mui/x-charts/PieChart';
 import { ResponsiveChartContainer } from '@mui/x-charts';
 
 const TokenomicsSection = () => {
-
+    
+    const [windowDimensions, setWindowDimensions] = useState({
+        width: "900",
+        height: window.innerHeight,
+      });
+    
     const pietexts = {
         "Treasury": "For future: Liquidity, campaigns, marketing, listings",
         "Remaining tokens": "Liquidity, airdrops, giveaways..."
     }
+
+    useEffect(() => {
+        const handleResize = () => {
+            const container = document.getElementById('pieContainer')
+            console.log(container);
+          setWindowDimensions({
+            width: container.clientWidth,
+            height: container.clientHeight,
+          });
+        };
+    
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+        handleResize()
+      }, []);
 
 
     return (
@@ -17,9 +40,9 @@ const TokenomicsSection = () => {
             <img src='./dog-tokenomics3.png' id="tokenomics"/>
 
             <div className='tokenomics-pie-container'>
-                <div className='pie-container'>
+                <div className='pie-container' id='pieContainer'>
                 <h2>WOOF-NOMICS</h2>
-                    <PieChart
+                    <StyledPieChartMaterial
                         series={[
                             
                             {
@@ -31,7 +54,9 @@ const TokenomicsSection = () => {
                                     { id: 4, value: 233333333, label: 'Burn' },
                                     { id: 5, value: 2552329157, label: 'Remaining tokens' },
                                 ],
-                                arcLabel: (item) => `${item.value.toLocaleString()}`,
+                                // arcLabel: (item) => `${item.value.toLocaleString()}`,
+                                arcLabel: (item) => `${item.label} (${item.value})`,
+
                                 valueFormatter: (v, { dataIndex }) => {
                                     return `${v.value.toLocaleString()} ${pietexts[v.label] ? '- ' + pietexts[v.label] : ''}`;
                                   },
@@ -46,15 +71,16 @@ const TokenomicsSection = () => {
                                 faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
                             },
                         ]}
-                        width={800}
-                        height={500}
+                        width={windowDimensions.width}
+                        height={windowDimensions.height * 0.8}
                         sx={{
                             [`& .${pieArcLabelClasses.root}`]: {
                               fill: 'white',
                               fontWeight: 'bold',
                               fontFamily: 'monospace',
                               fontSize:'14px',
-                              zIndex: '999999'
+                              zIndex: '999999',
+                              color: 'white'
                             },
                           }}
                     />

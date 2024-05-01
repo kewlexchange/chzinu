@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/system";
+import { PieChart } from "@mui/x-charts";
 
 
 export const StyledFlexCenterContainer = styled('div')`
@@ -286,7 +287,7 @@ export const StyledHowToBuySection = styled(StyledSection)`
 export const StyledTeamSection = styled(StyledSection)`
     width: 100%;
     display: flex;
-    height: 120vh;
+    height: auto;
     justify-content: flex-start;
     flex-direction: column;
 
@@ -297,7 +298,7 @@ export const StyledTeamSection = styled(StyledSection)`
         height: 60%;
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
 
         @media(max-width: 1300px){
             height: auto;
@@ -330,6 +331,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
         flex-direction: column;
         
         .pie-container{
+            width: 80%;
             margin-top: 2em;
             h2{
                 width: 100%;
@@ -609,7 +611,7 @@ export const StyledTokenomicCard = styled('div')`
     transition: transform 0.3s ease; /* Añadimos la propiedad bottom a la transición */
     padding-top: 1em;
     z-index: 99999;
-    margin: ${({cardnumber}) => cardnumber === '1' ? '20em 2em 0 2em' : cardnumber === '3' ? '38em 0 0 2em' : '0'};
+    margin: ${({cardnumber}) => cardnumber === '1' ? '20em 2em 0 2em' : cardnumber === '3' ? '34em 0 0 2em' : '4em 0 0 0'};
     background-color: white;
     color:black;
     &:hover {
@@ -657,9 +659,6 @@ export const StyledTokenomicCard = styled('div')`
 
 
     @media(max-width: 1300px){
-        // width: 300px;
-    }
-    @media(max-width: 1300px){
         margin: 0;
         align-self: ${({cardnumber}) => cardnumber === '1' ? 'flex-start' : cardnumber === '3' ? 'flex-end' : 'center'};
         margin: ${({cardnumber}) => cardnumber === '1' ? '2em 0 0 5em' : cardnumber === '3' ? '2em 4em 0 0' : '2em 0 0 0'};
@@ -668,8 +667,8 @@ export const StyledTokenomicCard = styled('div')`
         }
     }
     @media(max-width: 600px){
-        margin: 0;
-        margin-top: 2em;
+        width: auto;
+        margin: 2em 2em 2em 0;
         align-self: center;
         h2{
             font-size: 2em;
