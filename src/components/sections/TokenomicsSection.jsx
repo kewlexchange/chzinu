@@ -5,8 +5,8 @@ import { PieChart, pieArcLabelClasses  } from '@mui/x-charts/PieChart';
 const TokenomicsSection = () => {
     
     const [windowDimensions, setWindowDimensions] = useState({
-        width: "900",
-        height: window.innerHeight,
+        width: 900,
+        height: 600,
       });
     
     const pietexts = {

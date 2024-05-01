@@ -342,7 +342,7 @@ export const StyledAboutSection = styled(StyledSection)`
 
 
         h2{
-            font-family: fantasy !important;
+            font-family:  Impact, fantasy !important;
             text-transform: uppercase;
             font-size: 50px;
             letter-spacing: 0.1em;
@@ -425,7 +425,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
             h2{
                 width: 100%;
                 text-align:center;
-                font-family: fantasy;
+                font-family: Impact, fantasy;
                 text-transform: uppercase;
                 font-size: 50px;
                 letter-spacing: 0.1em;
@@ -777,7 +777,7 @@ export const StyledTokenomicCard = styled('div')`
     }
 
     h2{
-        font-family: fantasy !important;
+        font-family:  Impact, fantasy !important;
         text-transform: uppercase;
         margin: 0;
         font-size: 2.5em;
