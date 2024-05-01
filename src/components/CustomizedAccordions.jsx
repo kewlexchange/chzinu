@@ -73,6 +73,7 @@ export default function CustomizedAccordions({arrayObjectsText}) {
         <Accordion key={index} expanded={expanded ===  `panel${index+1}`} onChange={handleChange(`panel${index+1}`)}>
         <AccordionSummary aria-controls={`panel${index+1}d-content`} id={`panel${index+1}d-header`}>
           <Typography 
+          id="titleAccordeon"
           style={{
             fontSize: '30px',
              fontWeight:'600',
@@ -82,6 +83,7 @@ export default function CustomizedAccordions({arrayObjectsText}) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography
+          id="textAccordeon"
           style={{
             fontSize: '20px',
              fontWeight:'500',

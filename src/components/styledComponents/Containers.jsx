@@ -321,16 +321,16 @@ export const StyledHomeSection = styled(StyledSection)`
 export const StyledAboutSection = styled(StyledSection)`
     width: 100%;
     display: flex;
-    height: 120vh;
-    align-items: flex-start;
+    height: auto;
+    align-items: center;
     overflow: hidden;
+    flex-direction: column;
 
     .about-us-container{
 
-        position: absolute;
         width: 80%;
         height: 80%;
-        margin-top: 14em;
+        margin-top: 4em;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -348,6 +348,19 @@ export const StyledAboutSection = styled(StyledSection)`
             margin: 0;
             padding: 0.5em;
 
+        }
+
+
+        @media(max-width: 500px){
+            h2{
+                font-size: 40px;
+            }
+            #titleAccordeon{
+                font-size: 25px !important;
+            }
+            #textAccordeon{
+                font-size: 14px !important;
+            }
         }
 
     }
@@ -847,6 +860,7 @@ export const StyledFooterSection = styled(StyledSection)`
     width: 70%;
     display: flex;
     height: auto;
+    margin-top: 2em;
     padding-bottom: 1em;
     flex-direction: column;
     align-items: center;
@@ -876,6 +890,11 @@ export const StyledFooterSection = styled(StyledSection)`
         font-size: 50px;
         margin-right: 10px;
 
+    }
+
+
+    @media(max-width: 900px){
+        width: 100%;
     }
 `
 
