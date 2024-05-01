@@ -78,7 +78,7 @@ const HomeSection = () => {
                                 variant='contained'
                                 onClick={() => window.open('https://www.coingecko.com/en/coins/chiliz-inu', '_blank')}
                                 >
-                                View chart
+                                Chart
                             </StyledHomeButton>
                         </div>
                         {/* <p className='text-3 animate__animated animate__fadeIn animate__fast'>Build, trust, educate, and bark our way through the Chiliz universe.</p> */}

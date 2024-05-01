@@ -132,16 +132,18 @@ export const StyledNavBar = styled('div')`
 
 export const StyledHomeContainer = styled('div')`
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+
 
 
     .home-text-container{
         width: 100%;
         height: 100%;
+        padding-bottom: 3em;
         color: #393939;
         font-family: monospace;
         font-weight: bold;
@@ -153,8 +155,12 @@ export const StyledHomeContainer = styled('div')`
         
         .contract-address{
             font-size: 22px;
-            margin-top: -1.5em;
             cursor: pointer;
+            padding: 0.5em;
+            border: 1px solid black;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
             span{
                 transition: all .2s ease;
                 color: #ce0001;
@@ -162,8 +168,28 @@ export const StyledHomeContainer = styled('div')`
                     color: red;
                 }
             }
+            @media(max-width: 900px){
+                margin:1em;
+                font-size: 20px;
+                text-align: center; 
+            }
+            @media(max-width: 500px){
+                width: 80%;
+                margin:1em;
+                font-size: 20px;
+                overflow: hidden; /* Oculta el texto que se desborda del contenedor */
+                text-overflow: ellipsis; /
+                text-align: center;
+                
+            }
+        }
+
+
+        @media(max-width: 1300px){
+            padding-bottom: 0;
         }
     }
+
 
 
 
@@ -172,11 +198,10 @@ export const StyledHomeContainer = styled('div')`
 export const StyledHomeTitle = styled('div')`
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     margin-top: 7em;
     h1{
-
         width: 100%;
         text-align: center;
 
@@ -212,6 +237,33 @@ export const StyledHomeTitle = styled('div')`
     }
 
 
+    @media(max-width: 500px){
+        h1{
+            margin: 2em;
+
+            span{
+                letter-spacing: 0em;
+                font-size: 3.5em;
+            }
+        }
+
+        .text-animated{
+            margin-top: -80px;
+            div{
+                width: 320px;
+                text-align: left;
+                text-wrap: nowrap;
+                p{
+                    font-size: 1.8em;
+            
+                    span{
+                        color: #ce0001;
+                    }
+                }
+    
+            }
+        }
+    }
 
 `
 
@@ -239,8 +291,15 @@ export const StyledHomeText = styled('div')`
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        margin-bottom: 5em;
     }
 
+
+    @media(max-width: 500px){
+        .text-2{
+            font-size: 30px;
+        }
+    }
 
 `
 
@@ -255,7 +314,7 @@ export const StyledSection = styled('div')`
 export const StyledHomeSection = styled(StyledSection)`
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: auto;
     overflow: hidden;
 `
 
@@ -430,6 +489,13 @@ export const StyledHomeButton = styled(Button)`
         color: #ce0001;
     }
 
+
+    @media(max-width: 550px){
+        font-size: 22px !important;
+    }
+    @media(max-width: 450px){
+        font-size: 18px !important;
+    }
 
 `
 
