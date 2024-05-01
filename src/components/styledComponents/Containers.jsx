@@ -287,17 +287,23 @@ export const StyledTeamSection = styled(StyledSection)`
     width: 100%;
     display: flex;
     height: 120vh;
-    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
 
 
     .team-cards-container{
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 60%;
-        margin-top: 140px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+
+        @media(max-width: 1300px){
+            height: auto;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 `
 export const StyledTokenomicsSection = styled(StyledSection)`
@@ -322,7 +328,6 @@ export const StyledTokenomicsSection = styled(StyledSection)`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        // z-index: 9999;
         
         .pie-container{
             margin-top: 2em;
@@ -342,6 +347,21 @@ export const StyledTokenomicsSection = styled(StyledSection)`
         }
     
         
+    }
+
+    @media(max-width: 1300px){
+        img{
+            left: 30%;
+            transform: translateX(-30%);
+        }
+    }
+
+    
+    @media(max-width: 600px){
+        img{
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     
@@ -396,7 +416,7 @@ export const StyledPageLine = styled('div')`
 
         .line-item{
             width: 100%;
-            margin: 0 100px;
+            margin: 0 200px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -579,7 +599,7 @@ export const StyledTokenomicCard = styled('div')`
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 20px;
     width: 400px;
-    height: 300px;
+    height: auto;
     padding: 1em;
     display: flex; 
     flex-direction: column;
@@ -588,7 +608,8 @@ export const StyledTokenomicCard = styled('div')`
     border: 1px solid black;
     transition: transform 0.3s ease; /* Añadimos la propiedad bottom a la transición */
     padding-top: 1em;
-    margin: ${({cardnumber}) => cardnumber === '1' ? '20em 4em 0 0' : cardnumber === '3' ? '38em 0 0 4em' : '0'};
+    z-index: 99999;
+    margin: ${({cardnumber}) => cardnumber === '1' ? '20em 2em 0 2em' : cardnumber === '3' ? '38em 0 0 2em' : '0'};
     background-color: white;
     color:black;
     &:hover {
@@ -631,6 +652,28 @@ export const StyledTokenomicCard = styled('div')`
         bottom: -20px;
         right: -20px;
 
+
+    }
+
+
+    @media(max-width: 1300px){
+        // width: 300px;
+    }
+    @media(max-width: 1300px){
+        margin: 0;
+        align-self: ${({cardnumber}) => cardnumber === '1' ? 'flex-start' : cardnumber === '3' ? 'flex-end' : 'center'};
+        margin: ${({cardnumber}) => cardnumber === '1' ? '2em 0 0 5em' : cardnumber === '3' ? '2em 4em 0 0' : '2em 0 0 0'};
+        h2{
+            font-size: 2em;
+        }
+    }
+    @media(max-width: 600px){
+        margin: 0;
+        margin-top: 2em;
+        align-self: center;
+        h2{
+            font-size: 2em;
+        }
     }
 `
 
@@ -643,6 +686,11 @@ export const StyledTokenomicDog = styled('div')`
         width: 400px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
     }
+
+    @media(max-width:700px){
+        display: none;
+    }
+
 `
 
 export const StyledShamanDog = styled('div')`
