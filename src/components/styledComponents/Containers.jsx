@@ -125,6 +125,9 @@ export const StyledNavBar = styled('div')`
             display: none;
         }
     }
+    @media(max-width: 500px){
+        top: 8%;
+    }
 `;
 
 export const StyledHomeContainer = styled('div')`
@@ -551,9 +554,11 @@ export const StyledShibDog = styled('div')`
         cursor: pointer;
     }
 
-
         
     .bubble-dog{
+        p{
+            margin: 0;
+        }
         position: absolute;
         right: 2%;
         z-index: 999999;
@@ -621,9 +626,38 @@ export const StyledShibDog = styled('div')`
             svg{
                 font-size: 20px;
             }
+
+            &:after{
+                position: absolute;
+                z-index: 999999;
+                bottom: -8px;
+                left: 90px; 
+                background-color: #fff;
+                box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+                // transform: rotate(35deg); /* Rotar el piquito */
+    
+            }
+        }
+    }
+
+    @media (max-width: 700px){
+        .shib-dog{
+            top: 5%;
+            width: 100px;
         }
 
+        .bubble-dog{
+            top: -10px;
+            right: 50px;
+            width: 100px;
+            height: 25px;
 
+            p{display: none;}
+
+            svg{
+                font-size: 20px;
+            }
+        }
     }
 
 `
@@ -751,6 +785,8 @@ export const StyledFooterSection = styled(StyledSection)`
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+
+
 
     p{
         text-align: center;
