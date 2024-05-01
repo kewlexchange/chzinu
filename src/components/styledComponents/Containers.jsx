@@ -590,7 +590,7 @@ export const StyledRocketDog = styled('div')`
 
         &:hover {
             transform: scale(1.1) rotate(-35deg); /* Escalar al 110% y mantener la rotación */
-            bottom: -40px; /* Mover hacia arriba */
+            bottom: -185px; /* Mover hacia arriba */
         }
     }
 
