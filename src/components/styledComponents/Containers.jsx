@@ -117,7 +117,12 @@ export const StyledNavBar = styled('div')`
         display: none;
     }
 
-    @media(max-width: 800px){
+    @media(max-width: 1024px){
+        top: 2%;
+    }
+
+    @media(max-width: 700px){
+        top: 5%;
         .navbarBurger{
             display: block;
         }
@@ -125,9 +130,7 @@ export const StyledNavBar = styled('div')`
             display: none;
         }
     }
-    @media(max-width: 500px){
-        top: 8%;
-    }
+
 `;
 
 export const StyledHomeContainer = styled('div')`
@@ -453,7 +456,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
 
     
     @media(max-width: 850px){
-        height: 30vh;
+        height: 15vh;
         padding-bottom: 0;
         .tokenomics-pie-container{
             display: none;
@@ -580,7 +583,7 @@ export const StyledPageLine = styled('div')`
 
 
 export const StyledRocketDog = styled('div')`
-    @media(max-width: 1300px){
+    @media(max-width: 1100px){
         display: none;
     }
 
@@ -706,7 +709,7 @@ export const StyledShibDog = styled('div')`
         
     }
 
-    @media (max-width: 900px){
+    @media (max-width: 1050px){
         .shib-dog{
             width: 140px;
         }
@@ -732,9 +735,9 @@ export const StyledShibDog = styled('div')`
         }
     }
 
-    @media (max-width: 700px){
+    @media (max-width: 1050px){
         .shib-dog{
-            top: 5%;
+            top: 4%;
             width: 100px;
         }
 
@@ -860,8 +863,14 @@ export const StyledShamanDog = styled('div')`
         cursor: pointer;
     }
 
-    @media(max-width: 1300px){
+    @media(max-width: 1100px){
         display: none;
+    }
+
+    @media(max-width: 1500px){
+        .shamman-dog{
+            bottom: -150px;
+        }
     }
 
 `
