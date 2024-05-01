@@ -339,7 +339,6 @@ export const StyledAboutSection = styled(StyledSection)`
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 20px;
         background: #ffffff;
-        font-family: fantasy !important;
 
 
         h2{
@@ -778,8 +777,7 @@ export const StyledTokenomicCard = styled('div')`
     }
 
     h2{
-        font-family: monospace;
-        font-family: fantasy;
+        font-family: fantasy !important;
         text-transform: uppercase;
         margin: 0;
         font-size: 2.5em;
