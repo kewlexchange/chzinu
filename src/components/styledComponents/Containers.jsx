@@ -339,10 +339,11 @@ export const StyledAboutSection = styled(StyledSection)`
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
         border-radius: 20px;
         background: #ffffff;
+        font-family: fantasy !important;
 
 
         h2{
-            font-family: fantasy;
+            font-family: fantasy !important;
             text-transform: uppercase;
             font-size: 50px;
             letter-spacing: 0.1em;
@@ -357,7 +358,7 @@ export const StyledAboutSection = styled(StyledSection)`
                 font-size: 40px;
             }
             #titleAccordeon{
-                font-size: 25px !important;
+                font-size: 22px !important;
             }
             #textAccordeon{
                 font-size: 14px !important;
@@ -400,6 +401,8 @@ export const StyledTokenomicsSection = styled(StyledSection)`
     height: 120vh;
     align-items: flex-start;
     position: relative;
+    padding-bottom: 4em;
+
     img{
         position: absolute;
         left: 50%;
@@ -448,6 +451,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
     
     @media(max-width: 700px){
         height: 30vh;
+        padding-bottom: 0;
         .tokenomics-pie-container{
             display: none;
         }
