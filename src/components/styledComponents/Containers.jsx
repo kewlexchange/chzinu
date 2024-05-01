@@ -400,7 +400,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
     height: 120vh;
     align-items: flex-start;
     position: relative;
-    padding-bottom: 4em;
+    padding-bottom: 3em;
 
     img{
         position: absolute;
