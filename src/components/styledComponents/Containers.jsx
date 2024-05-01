@@ -326,7 +326,7 @@ export const StyledAboutSection = styled(StyledSection)`
     align-items: center;
     overflow: hidden;
     flex-direction: column;
-
+    padding-bottom: 2em;
     .about-us-container{
 
         width: 80%;
