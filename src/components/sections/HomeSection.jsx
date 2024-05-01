@@ -10,7 +10,7 @@ import ShamanDog from '../ShamanDog';
 
 const HomeSection = () => {
     const { word, stop, start } = useTypingText(
-        ["pet!", "meme token!", "dog!"],
+        ["pet!", "meme!", "dog!"],
         130,
         20
       );
@@ -51,7 +51,7 @@ const HomeSection = () => {
                             <span className='animate__animated animate__fadeIn animate__fast'>C</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>H</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>Z</span>
-                            <span className='animate__animated animate__fadeIn animate__fast' style={{marginLeft:'40px'}}>I</span>
+                            <span className='animate__animated animate__fadeIn animate__fast' style={{marginLeft:'30px'}}>I</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>N</span>
                             <span className='animate__animated animate__fadeIn animate__fast'>U</span>
                             <ShibDog/>
