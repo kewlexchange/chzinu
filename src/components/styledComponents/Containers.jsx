@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/system";
-import { PieChart } from "@mui/x-charts";
 
 
 export const StyledFlexCenterContainer = styled('div')`
@@ -46,7 +45,7 @@ export const StyledAppContainer = styled('div')`
 
 
 export const StyledNavBar = styled('div')`
-    width: 550px;
+    width: auto;
     margin: 0 auto;
     position: absolute;
     top: 5%;
@@ -65,7 +64,7 @@ export const StyledNavBar = styled('div')`
 
     .logo-img{
         cursor: pointer;
-        width: 10%;
+        width: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -114,6 +113,18 @@ export const StyledNavBar = styled('div')`
     }
 
 
+    .navbarBurger{
+        display: none;
+    }
+
+    @media(max-width: 800px){
+        .navbarBurger{
+            display: block;
+        }
+        .navbar{
+            display: none;
+        }
+    }
 `;
 
 export const StyledHomeContainer = styled('div')`
@@ -366,8 +377,30 @@ export const StyledTokenomicsSection = styled(StyledSection)`
         }
     }
 
+
     
 `
+
+export const StyledButtonIcon = styled(Button)`
+    color: #ffffff;
+    background-color: #ce0001;
+    font-size: 1em;
+    min-width: unset;
+    width: 2em;
+    margin-left: 0.5em;
+    outline: none;
+    &:hover{
+        border: 1px solid black;
+        background-color: #ce0001;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    &:active{
+        background-color: #ce0001;
+
+    }
+`;
 
 
 export const StyledHomeButton = styled(Button)`
@@ -668,7 +701,7 @@ export const StyledTokenomicCard = styled('div')`
     }
     @media(max-width: 600px){
         width: auto;
-        margin: 2em 2em 2em 0;
+        margin: 2em 2em 2em 2em;
         align-self: center;
         h2{
             font-size: 2em;

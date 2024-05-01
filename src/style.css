@@ -35,3 +35,11 @@ body::-webkit-scrollbar-thumb {
         transform: rotate(360deg);
     }
 }
+
+.show{
+    display: block !important;
+}
+
+.hide{
+    display: none !important;
+}

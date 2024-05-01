@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { StyledPageLine, StyledPieChartMaterial, StyledTokenomicsSection } from '../styledComponents/Containers';
+import { StyledPageLine, StyledTokenomicsSection } from '../styledComponents/Containers';
 import { PieChart, pieArcLabelClasses  } from '@mui/x-charts/PieChart';
-import { ResponsiveChartContainer } from '@mui/x-charts';
 
 const TokenomicsSection = () => {
     
@@ -35,14 +34,14 @@ const TokenomicsSection = () => {
 
 
     return (
-        <StyledTokenomicsSection >
+        <StyledTokenomicsSection id="tokenomics" >
             {/* <LineTextBanner /> */}
-            <img src='./dog-tokenomics3.png' id="tokenomics"/>
+            <img src='./dog-tokenomics3.png'/>
 
             <div className='tokenomics-pie-container'>
                 <div className='pie-container' id='pieContainer'>
                 <h2>WOOF-NOMICS</h2>
-                    <StyledPieChartMaterial
+                    <PieChart
                         series={[
                             
                             {
@@ -55,7 +54,7 @@ const TokenomicsSection = () => {
                                     { id: 5, value: 2552329157, label: 'Remaining tokens' },
                                 ],
                                 // arcLabel: (item) => `${item.value.toLocaleString()}`,
-                                arcLabel: (item) => `${item.label} (${item.value})`,
+                                arcLabel: (item) => `${item.value.toLocaleString()}`,
 
                                 valueFormatter: (v, { dataIndex }) => {
                                     return `${v.value.toLocaleString()} ${pietexts[v.label] ? '- ' + pietexts[v.label] : ''}`;
