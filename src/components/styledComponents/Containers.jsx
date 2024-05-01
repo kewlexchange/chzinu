@@ -448,7 +448,7 @@ export const StyledTokenomicsSection = styled(StyledSection)`
     }
 
     
-    @media(max-width: 700px){
+    @media(max-width: 850px){
         height: 30vh;
         padding-bottom: 0;
         .tokenomics-pie-container{
@@ -819,7 +819,7 @@ export const StyledTokenomicCard = styled('div')`
             font-size: 2em;
         }
     }
-    @media(max-width: 600px){
+    @media(max-width: 850px){
         width: auto;
         margin: 2em 2em 2em 2em;
         align-self: center;
@@ -839,7 +839,7 @@ export const StyledTokenomicDog = styled('div')`
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
     }
 
-    @media(max-width:700px){
+    @media(max-width:850px){
         display: none;
     }
 
