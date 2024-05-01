@@ -273,6 +273,7 @@ export const StyledHomeText = styled('div')`
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    position: relative;
 
 
     .text-2{
@@ -445,7 +446,11 @@ export const StyledTokenomicsSection = styled(StyledSection)`
     }
 
     
-    @media(max-width: 600px){
+    @media(max-width: 700px){
+        height: 30vh;
+        .tokenomics-pie-container{
+            display: none;
+        }
         img{
             left: 50%;
             transform: translateX(-50%);
@@ -574,7 +579,7 @@ export const StyledRocketDog = styled('div')`
     .rocket-dog{
         position: absolute;
         right: 0;
-        bottom: -50px;
+        bottom: -180px;
         transform: rotate(-35deg); 
         width: 150px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
@@ -591,7 +596,7 @@ export const StyledRocketDog = styled('div')`
         position: absolute;
         right: 0;
         z-index: 999999;
-        bottom: 150px;
+        bottom: 0px;
         display: inline-block;
         margin: 20px;
         text-align: center;
