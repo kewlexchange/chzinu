@@ -227,7 +227,8 @@ export const StyledHomeTitle = styled('div')`
             text-wrap: nowrap;
             p{
                 font-size: 2.5em;
-        
+                font-family: monospace;
+
                 span{
                     color: #ce0001;
                 }
@@ -282,6 +283,8 @@ export const StyledHomeText = styled('div')`
         font-size: 40px;
         margin-top: 1.5em;
         margin-bottom: 0;
+        font-family: monospace;
+
     }
 
 
@@ -497,6 +500,7 @@ export const StyledHomeButton = styled(Button)`
     background-color: #ce0001;
     font-family: monospace;
     border: 1px solid transparent;
+    font-family: monospace !important;
 
 
     &:hover{
@@ -603,7 +607,7 @@ export const StyledRocketDog = styled('div')`
         display: inline-block;
         margin: 20px;
         text-align: center;
-        font-family: "Press Start 2P", cursive;
+        font-family: monospace;
         font-size: 16px;
         line-height: 1.3em;
         background-color: #fff;
@@ -655,7 +659,7 @@ export const StyledShibDog = styled('div')`
         align-items: center;
         margin: 20px;
         text-align: center;
-        font-family: "Press Start 2P", cursive;
+        font-family: monospace;
         font-size: 20px;
         line-height: 1.3em;
         background-color: #fff;
