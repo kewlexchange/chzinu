@@ -137,6 +137,7 @@ export const StyledHomeContainer = styled('div')`
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 2em;
 
 
 
@@ -586,7 +587,7 @@ export const StyledRocketDog = styled('div')`
     .rocket-dog{
         position: absolute;
         right: 0;
-        bottom: -180px;
+        bottom: -200px;
         transform: rotate(-35deg); 
         width: 150px;
         transition: transform 0.3s ease, bottom 0.3s ease; /* Añadimos la propiedad bottom a la transición */
@@ -603,7 +604,7 @@ export const StyledRocketDog = styled('div')`
         position: absolute;
         right: 0;
         z-index: 999999;
-        bottom: 0px;
+        bottom: -20px;
         display: inline-block;
         margin: 20px;
         text-align: center;
