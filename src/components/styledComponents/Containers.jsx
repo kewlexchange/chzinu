@@ -336,6 +336,16 @@ export const StyledPuppyGuideSection =  styled(StyledSection)`
             position: absolute;
         }
 
+
+        @media(max-width: 500px){
+            img{
+                width: 80%;
+            }
+            h1{
+                font-size: 30px;
+            }
+        }
+
 `
 
 export const StyledHomeSection = styled(StyledSection)`
