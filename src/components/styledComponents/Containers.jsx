@@ -126,7 +126,7 @@ export const StyledNavBar = styled('div')`
         .navbarBurger{
             display: block;
         }
-        .navbar{
+        .navbar, #woofnomicsnav{
             display: none;
         }
     }
@@ -317,6 +317,25 @@ export const StyledSection = styled('div')`
     justify-content: center;
     align-items: flex-end;
     height: 100vh;
+`
+
+export const StyledPuppyGuideSection =  styled(StyledSection)`
+
+    h1{
+        font-family:  Impact, fantasy !important;
+        text-transform: uppercase;
+        font-size: 60px;
+        letter-spacing: 0.1em;
+        margin: 0;
+        padding-bottom: 0.8em;
+        z-index: 9999;
+    }
+
+        img{
+            top: 200px;
+            position: absolute;
+        }
+
 `
 
 export const StyledHomeSection = styled(StyledSection)`

@@ -6,19 +6,21 @@ import { faBars} from '@fortawesome/free-solid-svg-icons';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+    const navigate = useNavigate()
     const {scrollToTeam} = useScrollClick()
     return (
         <StyledNavBar className='animate__animated animate__fadeInDown animate__faster'>
             <div className='logo-img'>
-                <img src='./coin.jpg' alt='no-logo' onClick={scrollToTeam}/>
+                <img src='./coin.jpg' alt='no-logo' onClick={() => navigate('/')}/>
             </div>
             <div className={`navbar-items navbar`}>
-                <a href="#about">ABOUT</a>
-                <a href="#tokenomics">WOOF-NOMICS</a>
+                <a href="#about" onClick={() => navigate('/home#about')}>ABOUT</a>
+                <a href="#tokenomics" onClick={() => navigate('/home#tokenomics')}>WOOF-NOMICS</a>
                 <a href="https://medium.com/@chilizinu/introducing-chzinu-the-meme-tastic-reverse-rug-token-b61b80a6028d" target='blank'>WOOFPAPER</a>
-                <a title="Coming soon">PUPPY GUIDE</a>
+                <a title="Coming soon" onClick={() => navigate('/puppy-guide')}>PUPPY GUIDE</a>
                 {/* <a href="#buy" target='blank'>Buy</a> */}
             </div>
             <div className='navbarBurger'>
@@ -33,9 +35,9 @@ const Navbar = () => {
                             <FontAwesomeIcon size='1x' icon={faBars}/>
                         </StyledButtonIcon>
                     <Menu {...bindMenu(popupState)}>
-                        <MenuItem onClick={() => {scrollToTeam('about')}}>ABOUT</MenuItem>
-                        <MenuItem onClick={() => scrollToTeam('pieContainer')}>WOOF-NOMICS</MenuItem>
+                        <MenuItem onClick={() => navigate('/home#about')}>ABOUT</MenuItem>
                         <MenuItem onClick={() => window.open('https://medium.com/@chilizinu/introducing-chzinu-the-meme-tastic-reverse-rug-token-b61b80a6028d')}>WOOFPAPER</MenuItem>
+                        <MenuItem onClick={() => navigate('/puppy-guide')}>PUPPY GUIDE</MenuItem>
                         {/* <MenuItem title='Coming soon'>PUPPY GUIDE</MenuItem> */}
                     </Menu>
                     </React.Fragment>
