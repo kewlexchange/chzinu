@@ -7,7 +7,7 @@ import RocketDog from "../components/RocketDog";
 export default function PuppyGuide() {
   return <>
     <StyledPuppyGuideSection>
-      <h1>COMMING SOON</h1>
+      <h1>COMING SOON</h1>
       <ShibDog/>
       <img src="/comming_soon.png"/>
     </StyledPuppyGuideSection>
