@@ -4,9 +4,9 @@ import TokenomicCard from '../TokenomicCard';
 import TokenomicDog from '../TokenomicDog';
 import LineTextBanner from '../LineTextBanner';
 
-const TeamSection = () => {
+const ProyectInfo = () => {
     return (
-        <StyledTeamSection id="team">
+        <StyledTeamSection id="proyectInfo">
             <LineTextBanner />
 
             <div className='team-cards-container'>
@@ -37,4 +37,4 @@ const TeamSection = () => {
     );
 }
 
-export default TeamSection;
+export default ProyectInfo;

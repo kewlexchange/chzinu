@@ -20,6 +20,7 @@ const Navbar = () => {
                 <a href="#about" onClick={() => navigate('/home#about')}>ABOUT</a>
                 <a href="#tokenomics" onClick={() => navigate('/home#tokenomics')}>WOOF-NOMICS</a>
                 <a href="https://medium.com/@chilizinu/introducing-chzinu-the-meme-tastic-reverse-rug-token-b61b80a6028d" target='blank'>WOOFPAPER</a>
+                <a  onClick={() => navigate('/Team')}>TEAM</a>
                 <a title="Coming soon" onClick={() => navigate('/puppy-guide')}>PUPPY GUIDE</a>
                 {/* <a href="#buy" target='blank'>Buy</a> */}
             </div>
@@ -38,6 +39,7 @@ const Navbar = () => {
                         <MenuItem onClick={() => navigate('/home#about')}>ABOUT</MenuItem>
                         <MenuItem onClick={() => window.open('https://medium.com/@chilizinu/introducing-chzinu-the-meme-tastic-reverse-rug-token-b61b80a6028d')}>WOOFPAPER</MenuItem>
                         <MenuItem onClick={() => navigate('/puppy-guide')}>PUPPY GUIDE</MenuItem>
+                        <MenuItem onClick={() => navigate('/team')}>TEAM</MenuItem>
                         {/* <MenuItem title='Coming soon'>PUPPY GUIDE</MenuItem> */}
                     </Menu>
                     </React.Fragment>

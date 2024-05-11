@@ -322,7 +322,7 @@ export const StyledSection = styled('div')`
 export const StyledPuppyGuideSection =  styled(StyledSection)`
 
     h1{
-        font-family:  Impact, fantasy !important;
+        font-family: "Luckiest Guy", cursive;
         text-transform: uppercase;
         font-size: 60px;
         letter-spacing: 0.1em;
@@ -378,7 +378,7 @@ export const StyledAboutSection = styled(StyledSection)`
 
 
         h2{
-            font-family:  Impact, fantasy !important;
+            font-family: "Luckiest Guy", cursive;
             text-transform: uppercase;
             font-size: 50px;
             letter-spacing: 0.1em;
@@ -562,7 +562,7 @@ export const StyledPageLine = styled('div')`
     position: relative;
     top: 0;
     width: 200%;
-    background: #ff6b6b;
+    background: #ce0001;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     display: flex;
@@ -585,11 +585,12 @@ export const StyledPageLine = styled('div')`
 
             p{
                 margin: 30px 0;
-                font-family: "Luckiest Guy";
+                font-family: "Luckiest Guy", cursive;
                 font-weight: 700;
                 font-style: normal;
                 font-size: 40px;
                 letter-spacing: 0.1em;
+                color: white;
             }
 
             img{
@@ -814,7 +815,7 @@ export const StyledTokenomicCard = styled('div')`
     }
 
     h2{
-        font-family:  Impact, fantasy !important;
+        font-family: "Luckiest Guy", cursive;
         text-transform: uppercase;
         margin: 0;
         font-size: 2.5em;
@@ -949,3 +950,100 @@ export const StyledFooterSection = styled(StyledSection)`
     }
 `
 
+
+
+
+
+
+export const StyledTeamSection2 = styled('div')`
+    height: auto;
+    margin-top: 10em;
+    margin-bottom: 4em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+
+    h1{
+        margin-top: -20px;
+        font-family: "Luckiest Guy", cursive;
+        font-size: 70px;
+        text-align: center;
+        width: 100%;
+    }
+`
+
+
+export const StyledXCard2 = styled('div')`
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 20px;
+    background-color: white;
+    user-select: none;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.8em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+    font-family: "Luckiest Guy", cursive;
+    border-color: black;
+    width: 750px;
+    align-self: flex-start;
+    margin: 0em 0em 2em 4em;
+    display: flex;
+    justify-content: space-between;
+
+
+
+    img{ 
+        width: 250px;
+        margin: 0;
+
+        transition: filter 300ms;
+        cursor: pointer;
+    }
+
+    div{
+        width: 100%;
+    }
+
+    h2{
+        margin-top: 0;
+    }
+
+    p{
+        font-size: 0.8em !important;
+        font-family: monospace;
+        font-size: 490px;
+        line-height: 1.3em;
+    }
+
+
+    &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(6), &:nth-of-type(8) {
+        align-self: flex-end;
+        margin: 0em 4em 2em 0em;
+    }
+
+
+    @media(max-width: 1200px){
+        align-self: center !important;;
+        margin: 1em !important;
+    }
+
+    @media(max-width: 1000px){
+        width: 80%;
+        margin: 1em !important;
+    }
+    @media(max-width: 700px){
+        img{
+            display: none;
+        }
+    }
+
+
+`
