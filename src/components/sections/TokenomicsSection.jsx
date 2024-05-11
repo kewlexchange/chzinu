@@ -82,6 +82,17 @@ const TokenomicsSection = () => {
                               color: 'white'
                             },
                           }}
+                          slotProps={{
+                            legend: {
+                              labelStyle: {
+                                fontSize: 20,
+                                fill: 'black',
+                                fontFamily: 'monospace',
+                              },
+                              markGap: 10,
+                              itemGap: 22,
+                            },
+                          }}
                     />
                 </div>
             </div>           
@@ -90,3 +101,5 @@ const TokenomicsSection = () => {
 }
 
 export default TokenomicsSection;
+
+

@@ -7,7 +7,7 @@ export default function FooterSection() {
     <p style={{width: '70%'}}>
     <strong>Financial Disclaimer: </strong> 
         ChzInu is a meme cryptocurrency project with no intrinsic value or expectation of financial return. 
-        The ChzInu project is 100% community lead and there is no formal team or roadmap yet. The token is completely for entertainment purposes only.
+        The ChzInu project is 100% community lead. The token is completely for entertainment purposes only.
     </p>
     <img src="./coin.jpg"/>
   </StyledFooterSection>;

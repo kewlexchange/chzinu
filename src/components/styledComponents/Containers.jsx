@@ -918,6 +918,7 @@ export const StyledFooterSection = styled(StyledSection)`
 
 
 
+
     p{
         text-align: center;
         margin: 15px px;
