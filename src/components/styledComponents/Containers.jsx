@@ -963,17 +963,26 @@ export const StyledTeamSection2 = styled('div')`
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
-    position: relative;
     width: 100%;
     overflow: hidden;
 
-
     h1{
-        margin-top: 0px;
+        width: 100%;
+        margin: 0px;
         font-family: "Luckiest Guy", cursive;
         font-size: 70px;
         text-align: center;
-        width: 100%;
+    }
+
+    audio{
+        width: 300px;
+        margin: 0 auto 2em auto;
+    }
+
+    @media(max-width: 600px){
+        h1{
+            font-size: 50px;
+        }
     }
 `
 

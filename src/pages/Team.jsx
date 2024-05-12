@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import handleAnimationScroll from "../hooks/handleAnimationScroll";
-import { StyledTeamSection2, StyledXCard2 } from "../components/styledComponents/Containers";
+import { StyledFlexFullCenterContainer, StyledTeamSection2, StyledXCard2 } from "../components/styledComponents/Containers";
 
 export default function TeamSection() {
 const { isVisible } = handleAnimationScroll('.target')
+const audioRef = useRef(null);
+
+useEffect(() => {
+  audioRef.current.play();
+}, []);
 
   return (
   <StyledTeamSection2>
-    <h1 className={`animate__animated animate__fadeIn`}>YOU ARE THE TEAM</h1>
+    {/* <div className="target" style={{display:'flex', flexDirection:'column', alignItems:'center',marginBottom: '2em', height:'auto', width:'100%'}}> */}
+      <h1 className={`animate__animated animate__fadeIn`}>YOU ARE THE TEAM</h1>
+      <audio ref={audioRef} controls>
+        <source src="ChilizInu.mp3" type="audio/mp4" />
+        Your browser does not support the audio element.
+      </audio>
+      {/* <button onClick={playAudio}>Play</button>
+      <button onClick={pauseAudio}>Pause</button> */}
+    {/* </div> */}
     <StyledXCard2 className={`animate__animated animate__backInLeft target`}>
       <div>
         <h2>THE DEVELOPER</h2>
