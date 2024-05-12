@@ -969,7 +969,7 @@ export const StyledTeamSection2 = styled('div')`
 
 
     h1{
-        margin-top: -20px;
+        margin-top: 0px;
         font-family: "Luckiest Guy", cursive;
         font-size: 70px;
         text-align: center;
@@ -1003,7 +1003,6 @@ export const StyledXCard2 = styled('div')`
     img{ 
         width: 250px;
         margin: 0;
-
         transition: filter 300ms;
         cursor: pointer;
     }
