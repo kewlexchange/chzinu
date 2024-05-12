@@ -28,7 +28,7 @@ useEffect(() => {
       </div>
       <img src="./developer.jpg" style={{marginLeft: '1em'}}/>
     </StyledXCard2>
-    <StyledXCard2 className={`animate__animated animate__backInRight target`}>
+    <StyledXCard2 className={`animate__animated ${isVisible[1] ? 'animate__backInRIght' : ''} target`} style={{visibility: isVisible[1] ? 'visible' : 'hidden'}}>
       <img src="./artist.jpg" style={{marginRight: '1em'}}/>
       <div>
         <h2>THE ARTIST</h2>
