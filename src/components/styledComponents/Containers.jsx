@@ -1049,7 +1049,15 @@ export const StyledXCard2 = styled('div')`
     }
     @media(max-width: 700px){
         img{
-            display: none;
+            // display: none;
+            margin: 0 auto !important;
+        }
+        flex-direction: column-reverse;
+        text-align: center;
+        &:nth-of-type(2), &:nth-of-type(4), &:nth-of-type(6), &:nth-of-type(8) {
+            flex-direction: column;
+            align-items: center;
+
         }
     }
 
